@@ -1,0 +1,5 @@
+Yo creo que este tema es interesante ya que desde una arista tan específica como son los peinados podemos observar como toda una generación es influenciada a través de distintas plataformas, las cuales generan que trends de hace muchos años resurjan, y se pueda viralizar desde la raiz una moda pasada, y no solo las pasarelas de lujo decidan cuáles serán las modas de la temporada.
+
+Es impresionante poder ver como peinados que usaban nuestras mamás o abuelas, y que se dejaron de hacer ya que tomaban mucho tiempo y las sociedades son muchos más rápidas, han vuelto y además las tecnologías han logrado diseñar productos que logran los mismos estilos pero mucho más rápido.
+
+Me gustaría poder mostrar esto a través de una comparación de videos que muestren cómo es que se realizaban estos peinados antes y cómo es que se hacen ahora con las nuevas herramientas tecnológicas, como los cepillos secadores Revlon o las Dyson, a través de tutoriales que son viralizados por medios como Tiktok, Pinterest, Youtube, entre otros. Demostrando que la generación Z siente nostalgia por el pasado, pero que logra hacerlo a su forma y a sus nuevas capacidades.

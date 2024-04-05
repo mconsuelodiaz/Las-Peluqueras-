@@ -1,0 +1,1 @@
+A continuación dejamos el link de nuestra presentación: [90´s hairstyle y la generación Z](https://www.canva.com/design/DAGBempzLl4/zhbKss5gQeMRkj4kihVAEA/edit)
