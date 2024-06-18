@@ -1,4 +1,4 @@
-Como miembro de la generación Z y fanática de los peinados de los años 90’, me gustaría exponer de dónde viene la inspiración por estos estilos y manifestar la nostalgia que he notado que tenemos los jóvenes por una época que no vivimos, pero que sí nos hubiera gustado hacerlo. Una época de mayor libertad de expresión y menos presión social, debido a la inexistencia de las RRSS.
+ Como miembro de la generación Z y fanática de los peinados de los años 90’, me gustaría exponer de dónde viene la inspiración por estos estilos y manifestar la nostalgia que he notado que tenemos los jóvenes por una época que no vivimos, pero que sí nos hubiera gustado hacerlo. Una época de mayor libertad de expresión y menos presión social, debido a la inexistencia de las RRSS.
 
 Así, me gustaría revelar las ganas de esta generación por manifestarse libremente su identidad a través de sus peinados. Y espero entregar el mensaje de que las redes sociales son lo que causan que todos seamos o nos veamos “iguales”, por ideas aceptadas colectivamente, pero que igualmente deberíamos buscar nuestra propia identidad y manifestarla.
 
