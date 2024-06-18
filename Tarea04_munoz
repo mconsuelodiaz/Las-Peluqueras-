@@ -1,0 +1,566 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNh4VEfrSsT4GShpDtD+Mkz",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Valentinamunoz5/Las-Peluqueras-/blob/main/Tarea04_munoz\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 408
+        },
+        "id": "uuTi_eGFSOpL",
+        "outputId": "31c21bee-e82a-4cef-b591-cc4d2df2f110"
+      },
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "FileNotFoundError",
+          "evalue": "[Errno 2] No such file or directory: '/content/basededatos_munoz.csv'",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mFileNotFoundError\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-3-f1024a4de795>\u001b[0m in \u001b[0;36m<cell line: 7>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[0;31m# Leer el archivo CSV\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      6\u001b[0m \u001b[0mfile_path\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m'/content/basededatos_munoz.csv'\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 7\u001b[0;31m \u001b[0mdata\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mpd\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mread_csv\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfile_path\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      8\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      9\u001b[0m \u001b[0;31m# Mostrar las primeras filas del DataFrame\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/io/parsers/readers.py\u001b[0m in \u001b[0;36mread_csv\u001b[0;34m(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)\u001b[0m\n\u001b[1;32m    910\u001b[0m     \u001b[0mkwds\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mupdate\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mkwds_defaults\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    911\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 912\u001b[0;31m     \u001b[0;32mreturn\u001b[0m \u001b[0m_read\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfilepath_or_buffer\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mkwds\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    913\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    914\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/io/parsers/readers.py\u001b[0m in \u001b[0;36m_read\u001b[0;34m(filepath_or_buffer, kwds)\u001b[0m\n\u001b[1;32m    575\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    576\u001b[0m     \u001b[0;31m# Create the parser.\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 577\u001b[0;31m     \u001b[0mparser\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mTextFileReader\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfilepath_or_buffer\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkwds\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    578\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    579\u001b[0m     \u001b[0;32mif\u001b[0m \u001b[0mchunksize\u001b[0m \u001b[0;32mor\u001b[0m \u001b[0miterator\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/io/parsers/readers.py\u001b[0m in \u001b[0;36m__init__\u001b[0;34m(self, f, engine, **kwds)\u001b[0m\n\u001b[1;32m   1405\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1406\u001b[0m         \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mhandles\u001b[0m\u001b[0;34m:\u001b[0m \u001b[0mIOHandles\u001b[0m \u001b[0;34m|\u001b[0m \u001b[0;32mNone\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;32mNone\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1407\u001b[0;31m         \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_engine\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_make_engine\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mf\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mengine\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1408\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1409\u001b[0m     \u001b[0;32mdef\u001b[0m \u001b[0mclose\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;34m->\u001b[0m \u001b[0;32mNone\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/io/parsers/readers.py\u001b[0m in \u001b[0;36m_make_engine\u001b[0;34m(self, f, engine)\u001b[0m\n\u001b[1;32m   1659\u001b[0m                 \u001b[0;32mif\u001b[0m \u001b[0;34m\"b\"\u001b[0m \u001b[0;32mnot\u001b[0m \u001b[0;32min\u001b[0m \u001b[0mmode\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1660\u001b[0m                     \u001b[0mmode\u001b[0m \u001b[0;34m+=\u001b[0m \u001b[0;34m\"b\"\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1661\u001b[0;31m             self.handles = get_handle(\n\u001b[0m\u001b[1;32m   1662\u001b[0m                 \u001b[0mf\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1663\u001b[0m                 \u001b[0mmode\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/io/common.py\u001b[0m in \u001b[0;36mget_handle\u001b[0;34m(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)\u001b[0m\n\u001b[1;32m    857\u001b[0m         \u001b[0;32mif\u001b[0m \u001b[0mioargs\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mencoding\u001b[0m \u001b[0;32mand\u001b[0m \u001b[0;34m\"b\"\u001b[0m \u001b[0;32mnot\u001b[0m \u001b[0;32min\u001b[0m \u001b[0mioargs\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mmode\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    858\u001b[0m             \u001b[0;31m# Encoding\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 859\u001b[0;31m             handle = open(\n\u001b[0m\u001b[1;32m    860\u001b[0m                 \u001b[0mhandle\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    861\u001b[0m                 \u001b[0mioargs\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mmode\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mFileNotFoundError\u001b[0m: [Errno 2] No such file or directory: '/content/basededatos_munoz.csv'"
+          ]
+        }
+      ],
+      "source": [
+        "# Importar las bibliotecas necesarias\n",
+        "import pandas as pd\n",
+        "import matplotlib.pyplot as plt\n",
+        "\n",
+        "# Leer el archivo CSV\n",
+        "file_path = '/content/basededatos_munoz.csv'\n",
+        "data = pd.read_csv(file_path)\n",
+        "\n",
+        "# Mostrar las primeras filas del DataFrame\n",
+        "print(data.head())\n",
+        "\n",
+        "# Graficar los datos en un gráfico de barras\n",
+        "ax = data.plot(kind='bar', figsize=(12, 8), colormap='viridis')  # Ajustar el tamaño y el color\n",
+        "\n",
+        "# Personalizar el gráfico\n",
+        "plt.title('Grafico de Barras de los Datos', fontsize=16)\n",
+        "plt.xlabel('Índice', fontsize=14)\n",
+        "plt.ylabel('Valores', fontsize=14)\n",
+        "\n",
+        "# Añadir una leyenda con título\n",
+        "plt.legend(title='Columnas', bbox_to_anchor=(1.05, 1), loc='upper left')\n",
+        "\n",
+        "# Añadir etiquetas a cada barra\n",
+        "for p in ax.patches:\n",
+        "    ax.annotate(str(p.get_height()), (p.get_x() * 1.005, p.get_height() * 1.005))\n",
+        "\n",
+        "# Mostrar el gráfico\n",
+        "plt.tight_layout()\n",
+        "plt.show()\n",
+        "\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!pip install pandas matplotlib\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eXBmBCq6TXun",
+        "outputId": "fee2429a-15e9-41b2-d6e8-97b824340f5b"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Requirement already satisfied: pandas in /usr/local/lib/python3.10/dist-packages (2.0.3)\n",
+            "Requirement already satisfied: matplotlib in /usr/local/lib/python3.10/dist-packages (3.7.1)\n",
+            "Requirement already satisfied: python-dateutil>=2.8.2 in /usr/local/lib/python3.10/dist-packages (from pandas) (2.8.2)\n",
+            "Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.10/dist-packages (from pandas) (2023.4)\n",
+            "Requirement already satisfied: tzdata>=2022.1 in /usr/local/lib/python3.10/dist-packages (from pandas) (2024.1)\n",
+            "Requirement already satisfied: numpy>=1.21.0 in /usr/local/lib/python3.10/dist-packages (from pandas) (1.25.2)\n",
+            "Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (1.2.1)\n",
+            "Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (0.12.1)\n",
+            "Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (4.53.0)\n",
+            "Requirement already satisfied: kiwisolver>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (1.4.5)\n",
+            "Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (24.1)\n",
+            "Requirement already satisfied: pillow>=6.2.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (9.4.0)\n",
+            "Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (3.1.2)\n",
+            "Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil>=2.8.2->pandas) (1.16.0)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Importar las bibliotecas necesarias\n",
+        "import pandas as pd\n",
+        "import matplotlib.pyplot as plt\n",
+        "\n",
+        "# Leer el archivo CSV\n",
+        "file_path = '/content/Basededatos_munoz.csv'\n",
+        "data = pd.read_csv(file_path)\n",
+        "\n",
+        "# Mostrar las primeras filas del DataFrame\n",
+        "print(data.head())\n",
+        "\n",
+        "# Graficar los datos en un gráfico de barras\n",
+        "ax = data.plot(kind='bar', figsize=(12, 8), colormap='viridis')  # Ajustar el tamaño y el color\n",
+        "\n",
+        "# Personalizar el gráfico\n",
+        "plt.title('Grafico de Barras de los Datos', fontsize=16)\n",
+        "plt.xlabel('Índice', fontsize=14)\n",
+        "plt.ylabel('Valores', fontsize=14)\n",
+        "\n",
+        "# Añadir una leyenda con título\n",
+        "plt.legend(title='Columnas', bbox_to_anchor=(1.05, 1), loc='upper left')\n",
+        "\n",
+        "# Añadir etiquetas a cada barra\n",
+        "for p in ax.patches:\n",
+        "    ax.annotate(str(p.get_height()), (p.get_x() * 1.005, p.get_height() * 1.005))\n",
+        "\n",
+        "# Mostrar el gráfico\n",
+        "plt.tight_layout()\n",
+        "plt.show()\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 304
+        },
+        "id": "8HSY6m_-Ta7i",
+        "outputId": "d41b49f6-e318-4399-93f5-cd78fb77d57e"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "UnicodeDecodeError",
+          "evalue": "'utf-8' codec can't decode byte 0xbf in position 0: invalid start byte",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mUnicodeDecodeError\u001b[0m                        Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-5-dac8e319dc4d>\u001b[0m in \u001b[0;36m<cell line: 7>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[0;31m# Leer el archivo CSV\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      6\u001b[0m \u001b[0mfile_path\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m'/content/Basededatos_munoz.csv'\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 7\u001b[0;31m \u001b[0mdata\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mpd\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mread_csv\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfile_path\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      8\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      9\u001b[0m \u001b[0;31m# Mostrar las primeras filas del DataFrame\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/io/parsers/readers.py\u001b[0m in \u001b[0;36mread_csv\u001b[0;34m(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)\u001b[0m\n\u001b[1;32m    910\u001b[0m     \u001b[0mkwds\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mupdate\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mkwds_defaults\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    911\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 912\u001b[0;31m     \u001b[0;32mreturn\u001b[0m \u001b[0m_read\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfilepath_or_buffer\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mkwds\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    913\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    914\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/io/parsers/readers.py\u001b[0m in \u001b[0;36m_read\u001b[0;34m(filepath_or_buffer, kwds)\u001b[0m\n\u001b[1;32m    575\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    576\u001b[0m     \u001b[0;31m# Create the parser.\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 577\u001b[0;31m     \u001b[0mparser\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mTextFileReader\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfilepath_or_buffer\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkwds\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    578\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    579\u001b[0m     \u001b[0;32mif\u001b[0m \u001b[0mchunksize\u001b[0m \u001b[0;32mor\u001b[0m \u001b[0miterator\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/io/parsers/readers.py\u001b[0m in \u001b[0;36m__init__\u001b[0;34m(self, f, engine, **kwds)\u001b[0m\n\u001b[1;32m   1405\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1406\u001b[0m         \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mhandles\u001b[0m\u001b[0;34m:\u001b[0m \u001b[0mIOHandles\u001b[0m \u001b[0;34m|\u001b[0m \u001b[0;32mNone\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;32mNone\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1407\u001b[0;31m         \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_engine\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_make_engine\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mf\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mengine\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1408\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1409\u001b[0m     \u001b[0;32mdef\u001b[0m \u001b[0mclose\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;34m->\u001b[0m \u001b[0;32mNone\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/io/parsers/readers.py\u001b[0m in \u001b[0;36m_make_engine\u001b[0;34m(self, f, engine)\u001b[0m\n\u001b[1;32m   1677\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1678\u001b[0m         \u001b[0;32mtry\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1679\u001b[0;31m             \u001b[0;32mreturn\u001b[0m \u001b[0mmapping\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0mengine\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mf\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0moptions\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1680\u001b[0m         \u001b[0;32mexcept\u001b[0m \u001b[0mException\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1681\u001b[0m             \u001b[0;32mif\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mhandles\u001b[0m \u001b[0;32mis\u001b[0m \u001b[0;32mnot\u001b[0m \u001b[0;32mNone\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/io/parsers/c_parser_wrapper.py\u001b[0m in \u001b[0;36m__init__\u001b[0;34m(self, src, **kwds)\u001b[0m\n\u001b[1;32m     91\u001b[0m             \u001b[0;31m# Fail here loudly instead of in cython after reading\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     92\u001b[0m             \u001b[0mimport_optional_dependency\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"pyarrow\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 93\u001b[0;31m         \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_reader\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mparsers\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mTextReader\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0msrc\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkwds\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     94\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     95\u001b[0m         \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0munnamed_cols\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_reader\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0munnamed_cols\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/_libs/parsers.pyx\u001b[0m in \u001b[0;36mpandas._libs.parsers.TextReader.__cinit__\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/_libs/parsers.pyx\u001b[0m in \u001b[0;36mpandas._libs.parsers.TextReader._get_header\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/_libs/parsers.pyx\u001b[0m in \u001b[0;36mpandas._libs.parsers.TextReader._tokenize_rows\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/_libs/parsers.pyx\u001b[0m in \u001b[0;36mpandas._libs.parsers.TextReader._check_tokenize_status\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/_libs/parsers.pyx\u001b[0m in \u001b[0;36mpandas._libs.parsers.raise_parser_error\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;31mUnicodeDecodeError\u001b[0m: 'utf-8' codec can't decode byte 0xbf in position 0: invalid start byte"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Importar las bibliotecas necesarias\n",
+        "import pandas as pd\n",
+        "import matplotlib.pyplot as plt\n",
+        "\n",
+        "# Leer el archivo CSV, especificando la codificación\n",
+        "file_path = '/content/Basededatos_munoz.csv'\n",
+        "data = pd.read_csv(file_path, encoding='latin-1') # Try 'latin-1' encoding. Change this to the actual encoding if it's different.\n",
+        "\n",
+        "# Mostrar las primeras filas del DataFrame\n",
+        "print(data.head())\n",
+        "\n",
+        "# Graficar los datos en un gráfico de barras\n",
+        "ax = data.plot(kind='bar', figsize=(12, 8), colormap='viridis')  # Ajustar el tamaño y el color\n",
+        "\n",
+        "# Personalizar el gráfico\n",
+        "plt.title('Grafico de Barras de los Datos', fontsize=16)\n",
+        "plt.xlabel('Índice', fontsize=14)\n",
+        "plt.ylabel('Valores', fontsize=14)\n",
+        "\n",
+        "# Añadir una leyenda con título\n",
+        "plt.legend(title='Columnas', bbox_to_anchor=(1.05, 1), loc='upper left')\n",
+        "\n",
+        "# Añadir etiquetas a cada barra\n",
+        "for p in ax.patches:\n",
+        "    ax.annotate(str(p.get_height()), (p.get_x() * 1.005, p.get_height() * 1.005))\n",
+        "\n",
+        "# Mostrar el gráfico\n",
+        "plt.tight_layout()\n",
+        "plt.show()\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 495
+        },
+        "id": "EbxmfRxaTqgm",
+        "outputId": "9ec33274-e5e7-4627-d59a-8c91fb565497"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "           ¿Acostumbras a pedir por delivery?;;;;;;;\n",
+            "SI;42                                       3%;;;;;;\n",
+            "A VECES;35                                  6%;;;;;;\n",
+            "NO;22                                       1%;;;;;;\n",
+            ";;;;;;;                                          NaN\n",
+            ";;;;;;;                                          NaN\n"
+          ]
+        },
+        {
+          "output_type": "error",
+          "ename": "TypeError",
+          "evalue": "no numeric data to plot",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-6-aa53a853291f>\u001b[0m in \u001b[0;36m<cell line: 13>\u001b[0;34m()\u001b[0m\n\u001b[1;32m     11\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     12\u001b[0m \u001b[0;31m# Graficar los datos en un gráfico de barras\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 13\u001b[0;31m \u001b[0max\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mdata\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mplot\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mkind\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;34m'bar'\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mfigsize\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;36m12\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;36m8\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mcolormap\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;34m'viridis'\u001b[0m\u001b[0;34m)\u001b[0m  \u001b[0;31m# Ajustar el tamaño y el color\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     14\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     15\u001b[0m \u001b[0;31m# Personalizar el gráfico\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/plotting/_core.py\u001b[0m in \u001b[0;36m__call__\u001b[0;34m(self, *args, **kwargs)\u001b[0m\n\u001b[1;32m    973\u001b[0m                     \u001b[0mdata\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mcolumns\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mlabel_name\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    974\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 975\u001b[0;31m         \u001b[0;32mreturn\u001b[0m \u001b[0mplot_backend\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mplot\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mdata\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mkind\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mkind\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkwargs\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    976\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    977\u001b[0m     \u001b[0m__call__\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m__doc__\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0m__doc__\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/plotting/_matplotlib/__init__.py\u001b[0m in \u001b[0;36mplot\u001b[0;34m(data, kind, **kwargs)\u001b[0m\n\u001b[1;32m     69\u001b[0m             \u001b[0mkwargs\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m\"ax\"\u001b[0m\u001b[0;34m]\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mgetattr\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0max\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m\"left_ax\"\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0max\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     70\u001b[0m     \u001b[0mplot_obj\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mPLOT_CLASSES\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0mkind\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mdata\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkwargs\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 71\u001b[0;31m     \u001b[0mplot_obj\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mgenerate\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     72\u001b[0m     \u001b[0mplot_obj\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mdraw\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     73\u001b[0m     \u001b[0;32mreturn\u001b[0m \u001b[0mplot_obj\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mresult\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/plotting/_matplotlib/core.py\u001b[0m in \u001b[0;36mgenerate\u001b[0;34m(self)\u001b[0m\n\u001b[1;32m    444\u001b[0m     \u001b[0;32mdef\u001b[0m \u001b[0mgenerate\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;34m->\u001b[0m \u001b[0;32mNone\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    445\u001b[0m         \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_args_adjust\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 446\u001b[0;31m         \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_compute_plot_data\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    447\u001b[0m         \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_setup_subplots\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    448\u001b[0m         \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_make_plot\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/plotting/_matplotlib/core.py\u001b[0m in \u001b[0;36m_compute_plot_data\u001b[0;34m(self)\u001b[0m\n\u001b[1;32m    630\u001b[0m         \u001b[0;31m# no non-numeric frames or series allowed\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    631\u001b[0m         \u001b[0;32mif\u001b[0m \u001b[0mis_empty\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 632\u001b[0;31m             \u001b[0;32mraise\u001b[0m \u001b[0mTypeError\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"no numeric data to plot\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    633\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    634\u001b[0m         \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mdata\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mnumeric_data\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mapply\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_convert_to_ndarray\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mTypeError\u001b[0m: no numeric data to plot"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Importar las bibliotecas necesarias\n",
+        "import pandas as pd\n",
+        "import matplotlib.pyplot as plt\n",
+        "\n",
+        "# Leer el archivo CSV, especificando la codificación e intentando interpretar los datos numéricos\n",
+        "file_path = '/content/Basededatos_munoz.csv'\n",
+        "data = pd.read_csv(file_path, encoding='latin-1', thousands=',', decimal='.') # Add parameters to handle thousands and decimal separators if needed\n",
+        "\n",
+        "# Mostrar las primeras filas del DataFrame para inspeccionar los datos\n",
+        "print(data.head())\n",
+        "print(data.dtypes) # Print data types of each column\n",
+        "\n",
+        "# If there are still no numeric columns, you might need to preprocess your data\n",
+        "# For example, if your numbers are stored as strings with commas as thousands separators, you can convert them to numeric:\n",
+        "# data['NumericColumn'] = data['NumericColumn'].str.replace(',', '').astype(float)\n",
+        "\n",
+        "# Graficar los datos en un gráfico de barras (proceed if you now have numeric columns)\n",
+        "ax = data.plot(kind='bar', figsize=(12, 8), colormap='viridis')  # Ajustar el tamaño y el color\n",
+        "\n",
+        "# Personalizar el gráfico\n",
+        "plt.title('Grafico de Barras de los Datos', fontsize=16)\n",
+        "plt.xlabel('Índice', fontsize=14)\n",
+        "plt.ylabel('Valores', fontsize=14)\n",
+        "\n",
+        "# Añadir una leyenda con título\n",
+        "plt.legend(title='Columnas', bbox_to_anchor=(1.05, 1), loc='upper left')\n",
+        "\n",
+        "# Añadir etiquetas a cada barra\n",
+        "for p in ax.patches:\n",
+        "    ax.annotate(str(p.get_height()), (p.get_x() * 1.005, p.get_height() * 1.005))\n",
+        "\n",
+        "# Mostrar el gráfico\n",
+        "plt.tight_layout()\n",
+        "plt.show()\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 547
+        },
+        "id": "ztpQ9f4UT5rR",
+        "outputId": "ade4a9dc-07f9-4a22-cf1d-e870823c8ba2"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "           ¿Acostumbras a pedir por delivery?;;;;;;;\n",
+            "SI;42                                       3%;;;;;;\n",
+            "A VECES;35                                  6%;;;;;;\n",
+            "NO;22                                       1%;;;;;;\n",
+            ";;;;;;;                                          NaN\n",
+            ";;;;;;;                                          NaN\n",
+            "¿Acostumbras a pedir por delivery?;;;;;;;    object\n",
+            "dtype: object\n"
+          ]
+        },
+        {
+          "output_type": "error",
+          "ename": "TypeError",
+          "evalue": "no numeric data to plot",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-7-989badfdd3cb>\u001b[0m in \u001b[0;36m<cell line: 18>\u001b[0;34m()\u001b[0m\n\u001b[1;32m     16\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     17\u001b[0m \u001b[0;31m# Graficar los datos en un gráfico de barras (proceed if you now have numeric columns)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 18\u001b[0;31m \u001b[0max\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mdata\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mplot\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mkind\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;34m'bar'\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mfigsize\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;36m12\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;36m8\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mcolormap\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;34m'viridis'\u001b[0m\u001b[0;34m)\u001b[0m  \u001b[0;31m# Ajustar el tamaño y el color\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     19\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     20\u001b[0m \u001b[0;31m# Personalizar el gráfico\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/plotting/_core.py\u001b[0m in \u001b[0;36m__call__\u001b[0;34m(self, *args, **kwargs)\u001b[0m\n\u001b[1;32m    973\u001b[0m                     \u001b[0mdata\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mcolumns\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mlabel_name\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    974\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 975\u001b[0;31m         \u001b[0;32mreturn\u001b[0m \u001b[0mplot_backend\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mplot\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mdata\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mkind\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mkind\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkwargs\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    976\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    977\u001b[0m     \u001b[0m__call__\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m__doc__\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0m__doc__\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/plotting/_matplotlib/__init__.py\u001b[0m in \u001b[0;36mplot\u001b[0;34m(data, kind, **kwargs)\u001b[0m\n\u001b[1;32m     69\u001b[0m             \u001b[0mkwargs\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m\"ax\"\u001b[0m\u001b[0;34m]\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mgetattr\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0max\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m\"left_ax\"\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0max\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     70\u001b[0m     \u001b[0mplot_obj\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mPLOT_CLASSES\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0mkind\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mdata\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkwargs\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 71\u001b[0;31m     \u001b[0mplot_obj\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mgenerate\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     72\u001b[0m     \u001b[0mplot_obj\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mdraw\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     73\u001b[0m     \u001b[0;32mreturn\u001b[0m \u001b[0mplot_obj\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mresult\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/plotting/_matplotlib/core.py\u001b[0m in \u001b[0;36mgenerate\u001b[0;34m(self)\u001b[0m\n\u001b[1;32m    444\u001b[0m     \u001b[0;32mdef\u001b[0m \u001b[0mgenerate\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;34m->\u001b[0m \u001b[0;32mNone\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    445\u001b[0m         \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_args_adjust\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 446\u001b[0;31m         \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_compute_plot_data\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    447\u001b[0m         \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_setup_subplots\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    448\u001b[0m         \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_make_plot\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.10/dist-packages/pandas/plotting/_matplotlib/core.py\u001b[0m in \u001b[0;36m_compute_plot_data\u001b[0;34m(self)\u001b[0m\n\u001b[1;32m    630\u001b[0m         \u001b[0;31m# no non-numeric frames or series allowed\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    631\u001b[0m         \u001b[0;32mif\u001b[0m \u001b[0mis_empty\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 632\u001b[0;31m             \u001b[0;32mraise\u001b[0m \u001b[0mTypeError\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"no numeric data to plot\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    633\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    634\u001b[0m         \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mdata\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mnumeric_data\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mapply\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_convert_to_ndarray\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mTypeError\u001b[0m: no numeric data to plot"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Importar las bibliotecas necesarias\n",
+        "import pandas as pd\n",
+        "import matplotlib.pyplot as plt\n",
+        "\n",
+        "# Leer el archivo CSV, especificando la codificación e intentando interpretar los datos numéricos\n",
+        "file_path = '/content/Basededatos_munoz.csv'\n",
+        "data = pd.read_csv(file_path, encoding='latin-1', thousands=',', decimal='.') # Add parameters to handle thousands and decimal separators if needed\n",
+        "\n",
+        "# Mostrar las primeras filas del DataFrame para inspeccionar los datos\n",
+        "print(data.head())\n",
+        "print(data.dtypes) # Print data types of each column\n",
+        "\n",
+        "# Identify numeric columns or columns that can be converted to numeric\n",
+        "# For example, if 'Columna1' should be numeric:\n",
+        "# data['Columna1'] = pd.to_numeric(data['Columna1'], errors='coerce')\n",
+        "# errors='coerce' will replace non-convertible values with NaN\n",
+        "\n",
+        "# If no suitable numeric columns exist, consider creating new ones based on your data\n",
+        "\n",
+        "# Graficar los datos en un gráfico de barras (proceed if you now have numeric columns)\n",
+        "if 'Columna1' in data.columns: # Replace 'Columna1' with the actual numeric column you want to plot\n",
+        "    ax = data['Columna1'].plot(kind='bar', figsize=(12, 8), colormap='viridis')  # Ajustar el tamaño y el color\n",
+        "\n",
+        "    # Personalizar el gráfico\n",
+        "    plt.title('Grafico de Barras de los Datos', fontsize=16)\n",
+        "    plt.xlabel('Índice', fontsize=14)\n",
+        "\n",
+        ""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "i3KNSSQYUEMF",
+        "outputId": "ef9619c1-ee8c-4db3-c866-2cf1682bec4c"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "           ¿Acostumbras a pedir por delivery?;;;;;;;\n",
+            "SI;42                                       3%;;;;;;\n",
+            "A VECES;35                                  6%;;;;;;\n",
+            "NO;22                                       1%;;;;;;\n",
+            ";;;;;;;                                          NaN\n",
+            ";;;;;;;                                          NaN\n",
+            "¿Acostumbras a pedir por delivery?;;;;;;;    object\n",
+            "dtype: object\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "import matplotlib.pyplot as plt\n",
+        "\n",
+        "# Leer el archivo CSV, especificando la codificación e intentando interpretar los datos numéricos\n",
+        "file_path = '/content/Basededatos_munoz.csv'\n",
+        "data = pd.read_csv(file_path, encoding='latin-1', thousands=',', decimal='.')\n",
+        "\n",
+        "# Identificar columnas numéricas o columnas que se puedan convertir a numéricas\n",
+        "# Por ejemplo, si 'Columna1' debería ser numérica:\n",
+        "# data['Columna1'] = pd.to_numeric(data['Columna1'], errors='coerce')\n",
+        "\n",
+        "# Supongamos que 'Columna1' es la columna numérica que quieres graficar\n",
+        "if 'Columna1' in data.columns:\n",
+        "    # Crear el gráfico de barras\n",
+        "    ax = data['Columna1'].plot(kind='bar', figsize=(12, 8), colormap='viridis')\n",
+        "\n",
+        "    # Personalizar el gráfico\n",
+        "    plt.title('Grafico de Barras de los Datos', fontsize=16)\n",
+        "    plt.xlabel('Índice', fontsize=14)\n",
+        "    plt.ylabel('Valores', fontsize=14)\n",
+        "\n",
+        "    # Añadir etiquetas a cada barra\n",
+        "    for p in ax.patches:\n",
+        "        ax.annotate(str(p.get_height()), (p.get_x() * 1.005, p.get_height() * 1.005))\n",
+        "\n",
+        "    # Mostrar el gráfico\n",
+        "    plt.tight_layout()\n",
+        "    plt.show()\n",
+        "\n",
+        "    # Crear la tabla con los valores numéricos\n",
+        "    tabla = pd.DataFrame(data['Columna1'])\n",
+        "    print(tabla)\n",
+        "\n",
+        "else:\n",
+        "    print(\"No se encontraron columnas numéricas adecuadas para graficar.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "T4usHAglUmoM",
+        "outputId": "704fe692-6764-4849-f497-32492a1f3b8c"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "No se encontraron columnas numéricas adecuadas para graficar.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "import matplotlib.pyplot as plt\n",
+        "\n",
+        "# Leer el archivo CSV\n",
+        "file_path = '/content/Basededatos_munoz.csv'\n",
+        "data = pd.read_csv(file_path, encoding='latin-1', thousands=',', decimal='.')\n",
+        "\n",
+        "# Supongamos que 'ColumnaTexto' es la columna con las etiquetas de texto\n",
+        "# y 'ColumnaValor' es la columna con los valores numéricos\n",
+        "if 'ColumnaTexto' in data.columns and 'ColumnaValor' in data.columns:\n",
+        "    # Crear el gráfico de barras\n",
+        "    ax = data.plot(x='ColumnaTexto', y='ColumnaValor', kind='bar', figsize=(12, 8), colormap='viridis')\n",
+        "\n",
+        "    # Personalizar el gráfico\n",
+        "    plt.title('Grafico de Barras de los Datos"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 106
+        },
+        "id": "pLTq5dPKU1S6",
+        "outputId": "292bcddf-16e6-44b8-af43-5fd85ed03e4e"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "unterminated string literal (detected at line 15) (<ipython-input-11-5c2da511205e>, line 15)",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-11-5c2da511205e>\"\u001b[0;36m, line \u001b[0;32m15\u001b[0m\n\u001b[0;31m    plt.title('Grafico de Barras de los Datos\u001b[0m\n\u001b[0m              ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m unterminated string literal (detected at line 15)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "import matplotlib.pyplot as plt\n",
+        "\n",
+        "# Leer el archivo CSV\n",
+        "file_path = '/content/Basededatos_munoz.csv'\n",
+        "data = pd.read_csv(file_path, encoding='latin-1', thousands=',', decimal='.')\n",
+        "\n",
+        "# Supongamos que 'ColumnaTexto' es la columna con las etiquetas de texto\n",
+        "# y 'ColumnaValor' es la columna con los valores numéricos\n",
+        "if 'ColumnaTexto' in data.columns and 'ColumnaValor' in data.columns:\n",
+        "    # Aquí debes poner el código que se ejecutará si la condición es verdadera\n",
+        "    print(\"Las columnas 'ColumnaTexto' y 'ColumnaValor' existen en el DataFrame.\")\n",
+        ""
+      ],
+      "metadata": {
+        "id": "Ns9q6avgVKE0"
+      },
+      "execution_count": 14,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "import matplotlib.pyplot as plt\n",
+        "\n",
+        "# Datos para el gráfico\n",
+        "etiquetas = ['Sí', 'No', 'A veces']\n",
+        "porcentajes = [42.3, 35.6, 22.1]\n",
+        "\n",
+        "# Crear el gráfico de barras\n",
+        "plt.bar(etiquetas, porcentajes, color='pink')\n",
+        "\n",
+        "# Personalizar el gráfico\n",
+        "plt.title('¿Acostumbras a pedir por delivery?')\n",
+        "plt.xlabel('Respuesta')\n",
+        "plt.ylabel('Porcentaje')\n",
+        "\n",
+        "# Mostrar el gráfico\n",
+        "plt.show()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 472
+        },
+        "id": "LDXIqVWvWD2b",
+        "outputId": "abdbf2b0-17b6-40e5-cdde-d4f0cf2ab583"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "<Figure size 640x480 with 1 Axes>"
+            ],
+            "image/png": "iVBORw0KGgoAAAANSUhEUgAAAjIAAAHHCAYAAACle7JuAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjcuMSwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy/bCgiHAAAACXBIWXMAAA9hAAAPYQGoP6dpAABDGElEQVR4nO3deVxUZf//8fegMmwOioJA4oaWuHarueeSKC6ZJpqaJZppeVPeaos3fStFSzRvl7pL20ys0Mo9WzQ1xXJLTS2rm9Tcci1SEFRQuH5/9HB+TYAiocOx1/PxmMfDuc51rvmcM0d4c851ZmzGGCMAAAAL8nB3AQAAAEVFkAEAAJZFkAEAAJZFkAEAAJZFkAEAAJZFkAEAAJZFkAEAAJZFkAEAAJZFkAEAAJZFkAEsbN26dbLZbFq4cKG7S7khDBo0SNWqVXNps9lsGjdunFvqudby297Cateundq1a+d8fuDAAdlsNiUmJhZLbUBhEWRgGU8++aRsNpv69u3r7lIkSRs3btS4ceN0+vRpd5cCoJA++eQTde3aVSEhISpXrpw6duyoXbt2ubss/AWl3V0AUBjGGM2fP1/VqlXT8uXLdebMGZUtW9atNW3cuFHx8fEaNGiQypUr59ZacO2cO3dOpUvzo/JKqlatqnPnzqlMmTLuLuWy7rzzTnXv3l3PPvus0tPTNWPGDHXs2FHfffedAgMD3V0eioAzMrCEdevW6eeff9Zbb72lixcvavHixe4u6YZw9uxZd5dQ4nl5eV0xyGRmZl6nagrm7vfSZrPJy8tLpUqVuq6ve7X7ftOmTVq2bJmGDx+uMWPGaO7cufrll1/02WefXaMKca0RZFAi2Gw2PfLIIwUuT0pKUp06ddS+fXtFRkYqKSkp335HjhzRkCFDFBoaKrvdrurVq2v48OHKzs529vnpp5/Up08fBQQEyMfHR82bN9fHH3+cZ6z//ve/qlu3rnx8fFS+fHk1adJE8+bNkySNGzdOTzzxhCSpevXqstlsstlsOnDgwGXnCvx5vsW4ceNks9n0448/6r777pO/v78CAwP1zDPPyBijw4cPq0ePHnI4HAoODtbUqVPz3e6cnBw99dRTCg4Olq+vr+666y4dPnzYpU+7du1Ur149bd++XW3atJGPj4+eeuopSdKyZcvUrVs3534LDw/XhAkTlJOT4zLGnj17FB0dreDgYHl5ealy5crq16+f0tLS8q3rki+++EJ9+vRRlSpVZLfbFRYWplGjRuncuXOXXU+SEhMTZbPZtH79ej300EOqUKGCHA6HBg4cqFOnTuXp/+mnn+r222+Xr6+vypYtq27duum7777L02/p0qWqV6+evLy8VK9ePS1ZsiTf1y/oPfv+++917733qnz58mrdunWx1T9z5kzVrVtXdrtdoaGhio2NzXP58nLvZUEKu725ubmaMWOG6tatKy8vL1WqVEkPPfRQvrX+0Z+P+//85z+y2Ww6ePBgnr5xcXHy9PR0GXPLli3q3Lmz/P395ePjo7Zt22rDhg0u6xW07+fMmSObzaYdO3bkea2JEyeqVKlSOnLkiCSpWbNmLsu9vLwkyeVnBKyF86Uo8bKysrRo0SI99thjkqT+/ftr8ODBOn78uIKDg539jh49qqZNm+r06dMaNmyYateurSNHjmjhwoU6e/asPD09deLECbVs2VJnz57ViBEjVKFCBc2dO1d33XWXFi5cqLvvvluS9MYbb2jEiBHq3bu3/vWvf+n8+fP65ptvtGXLFt17773q1auXfvzxR82fP1/Tp09XxYoVJUmBgYH65Zdfrnob+/btq4iICE2aNEkff/yxnnvuOQUEBOi1117THXfcocmTJyspKUmPP/64brvtNrVp08Zl/eeff142m01jxozRyZMnNWPGDEVGRmrnzp3y9vZ29ktNTVWXLl3Ur18/3XfffapUqZKk33/Z+vn5afTo0fLz89Pnn3/uPPU+ZcoUSb//oI+KilJWVpYeffRRBQcH68iRI/roo490+vRp+fv7F7h9CxYs0NmzZzV8+HBVqFBBX331lf773//q559/1oIFCwq1jx555BGVK1dO48aNU0pKimbNmqWDBw86JzxL0jvvvKOYmBhFRUVp8uTJOnv2rGbNmqXWrVtrx44dzomtn332maKjo1WnTh0lJCQoNTVVgwcPVuXKlQv9nvXp00e1atXSxIkTZYwplvrHjRun+Ph4RUZGavjw4c5+W7du1YYNG1wu2xT0Xubnarb3oYceUmJiogYPHqwRI0Zo//79evnll7Vjx448NVzOPffcoyeffFIffPCBM/Rf8sEHH6hTp04qX768JOnzzz9Xly5d1LhxY40dO1YeHh6aM2eO7rjjDn3xxRdq2rSpy/p/3ve9e/dWbGyskpKS9I9//MOlb1JSktq1a6ebbropT43nz5/XU089pQoVKqhHjx6F2i6UQAYoAX744Qdz/PjxfJctXLjQSDJ79uwxxhiTnp5uvLy8zPTp0136DRw40Hh4eJitW7fmGSM3N9cYY8zIkSONJPPFF184l505c8ZUr17dVKtWzeTk5BhjjOnRo4epW7fuZWueMmWKkWT279/v0r5//34jycyZMyfPOpLM2LFjnc/Hjh1rJJlhw4Y52y5evGgqV65sbDabmTRpkrP91KlTxtvb28TExDjb1q5daySZm266yaSnpzvbP/jgAyPJvPjii862tm3bGknm1VdfzVPX2bNn87Q99NBDxsfHx5w/f94YY8yOHTuMJLNgwYIC90lB8hs/ISHB2Gw2c/DgwcuuO2fOHCPJNG7c2GRnZzvbX3jhBSPJLFu2zBjz+/tYrlw5M3ToUJf1jx8/bvz9/V3ab731VhMSEmJOnz7tbPvss8+MJFO1alWX9Qt6z/r373/F7b6a+k+ePGk8PT1Np06dnMehMca8/PLLRpJ56623nG2Xey/zU9jt/eKLL4wkk5SU5LL+ihUr8rS3bdvWtG3b1vk8v+O+RYsWpnHjxi5jffXVV0aSefvtt40xv//frFWrlomKinL+PzXm92OmevXqpmPHjs62y+37/v37m9DQUJd99/XXXxf4f/HChQuma9euxm63m3Xr1uVZDuvg0hJKhI8++ki7d+/Od1lSUpKaNGmimjVrSpLzcsEfLy/l5uZq6dKl6t69u5o0aZJnjEt/8X7yySdq2rSpy6UAPz8/DRs2TAcOHND3338vSSpXrpx+/vlnbd26tdi28XIefPBB579LlSqlJk2ayBijIUOGONvLlSunW265RT/99FOe9QcOHOgy+bl3794KCQnRJ5984tLPbrdr8ODBedb/41mbM2fO6Ndff9Xtt9+us2fP6n//+58kOc+4rFy58qrnY/xx/MzMTP36669q2bKljDH5Xg7Iz7Bhw1zOBgwfPlylS5d2buOqVat0+vRp9e/fX7/++qvzUapUKTVr1kxr166VJB07dkw7d+5UTEyMy1mkjh07qk6dOoXepocffrjQfQtT/+rVq5Wdna2RI0fKw+P//2geOnSoHA5HnsufBb2Xf3Y127tgwQL5+/urY8eOLvuwcePG8vPzc+7Dwurbt6+2b9+uffv2Odvef/992e125xmQnTt3as+ePbr33nuVmprqfM3MzEx16NBB69evV25ursu4+e37gQMH6ujRoy41JiUlydvbW9HR0Xn6x8fH69NPP1VSUpLatm17VduFkoUggxLhiSeeyPea/enTp/XJJ5+obdu22rt3r/PRqlUrbdu2TT/++KMk6ZdfflF6errq1at32dc5ePCgbrnlljztERERzuWSNGbMGPn5+alp06aqVauWYmNj81yvL05VqlRxee7v7y8vLy/nJas/tuc3V6FWrVouz202m2rWrKkDBw64tN90003y9PTMs/53332nu+++W/7+/nI4HAoMDNR9990nSc75L9WrV9fo0aP15ptvqmLFioqKitIrr7xyxfkxknTo0CENGjRIAQEB8vPzU2BgoPOXR2HWz28b/fz8FBIS4tzGPXv2SJLuuOMOBQYGujw+++wznTx5UtL/f4//PJ6kfI+NglSvXr3QfQtT/6W6/lyDp6enatSokWeuSUHv5Z9dzfbu2bNHaWlpCgoKyrMPMzIynPuwsPr06SMPDw+9//77kn6/+3DBggXq0qWLHA6H8zUlKSYmJs9rvvnmm8rKyspzjOS37zt27KiQkBDnHzi5ubmaP3++evToke8dju+88446duyYb8iBtTBHBm6XkZEhyfWv9ksWLFigrKwsTZ06Nd+JrklJSYqPjy/2miIiIpSSkqKPPvpIK1as0KJFizRz5kw9++yzV3y9S2d//uzPE2f/KL87PQq6+8MUYj5GQfLbx6dPn1bbtm3lcDg0fvx4hYeHy8vLS19//bXGjBnj8tfw1KlTNWjQIC1btkyfffaZRowYoYSEBG3evLnA+SU5OTnq2LGjfvvtN40ZM0a1a9eWr6+vjhw5okGDBuX5a7uoLo3zzjvvuMyduqS4b6HOb19eT9fi9XNzcxUUFFTgZPqrvT05NDRUt99+uz744AM99dRT2rx5sw4dOqTJkye7vKYkTZkyRbfeemu+4/j5+bk8z2/bS5UqpXvvvVdvvPGGZs6cqQ0bNujo0aPOQP5nqampCgkJuartQclEkIHbXfqhmd8loaSkJNWrV09jx47Ns+y1117TvHnzFB8fr8DAQDkcjgIvT11StWpVpaSk5Gm/dPmkatWqzjZfX1/17dtXffv2VXZ2tnr16qXnn39ecXFx8vLyKjCwXJrA+Oc7TfK7e6O4XPqr9hJjjPbu3asGDRpccd1169YpNTVVixcvdplEvH///nz7169fX/Xr19fTTz+tjRs3qlWrVnr11Vf13HPP5dv/22+/1Y8//qi5c+dq4MCBzvZVq1YVZtOc9uzZo/bt2zufZ2Rk6NixY+rataskKTw8XJIUFBSkyMjIAse59B7/eZ9JyvfYKC5Xqv9SXSkpKapRo4azX3Z2tvbv33/Zbbqcq9ne8PBwrV69Wq1atSq2oNS3b1/985//VEpKit5//335+Pioe/fuLq8pSQ6Ho8jbeMnAgQM1depULV++XJ9++qkCAwMVFRWVb99hw4blmRgMa+LSEtzqyy+/1MiRI9WmTRv17t3bZdnhw4e1fv163XPPPerdu3eex+DBg7V3715t2bJFHh4e6tmzp5YvX65t27bleZ1LZzG6du2qr776Sps2bXIuy8zM1Ouvv65q1ao55wykpqa6rO/p6ak6derIGKMLFy5I+j3oSHkDi8PhUMWKFbV+/XqX9pkzZxZhDxXO22+/rTNnzjifL1y4UMeOHVOXLl2uuO6lMz9/PNOTnZ2dp9709HRdvHjRpa1+/fry8PBQVlbWVY1vjNGLL754xdr+6PXXX3fue0maNWuWLl686NzGqKgoORwOTZw40aXfJZfuJgsJCdGtt96quXPnulyyWLVqlXOO1LVwpfojIyPl6empl156yWVfzZ49W2lpaerWrVuRXvdqtveee+5RTk6OJkyYkGecixcvFulTrKOjo1WqVCnNnz9fCxYs0J133un8vyNJjRs3Vnh4uP7zn/84z87+0dXcBdigQQM1aNBAb775phYtWqR+/foVeCZu6NCh6tChw1VvD0oezsjAbY4cOaJevXqpatWqWrx4cZ5LKfPmzZMxRnfddVe+63ft2lWlS5dWUlKSmjVrpokTJ+qzzz5T27ZtNWzYMEVEROjYsWNasGCBvvzyS5UrV07//ve/NX/+fHXp0kUjRoxQQECA5s6dq/3792vRokXOSZadOnVScHCwWrVqpUqVKumHH37Qyy+/rG7dujmvtzdu3FiS9H//93/q16+fypQpo+7du8vX11cPPvigJk2apAcffFBNmjTR+vXrnfN5roWAgAC1bt1agwcP1okTJzRjxgzVrFlTQ4cOveK6LVu2VPny5RUTE6MRI0bIZrPpnXfeyXMJ6/PPP9cjjzyiPn366Oabb9bFixf1zjvv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AAAsiyADAAAsiyADAAAsiyADAAAsiyADAAAsiyADAAAsiyADAAAsiyADAAAsiyADAAAsiyADAAAsiyADAAAsiyADAAAsiyADAAAsiyADAAAsiyADAAAsiyADAAAsiyADAAAsiyADAAAsiyADAAAsiyADAAAsiyADAAAsiyADAAAsiyADAAAsiyADAAAsy61BZtasWWrQoIEcDoccDodatGihTz/91Ln8/Pnzio2NVYUKFeTn56fo6GidOHHCjRUDAICSxK1BpnLlypo0aZK2b9+ubdu26Y477lCPHj303XffSZJGjRql5cuXa8GCBUpOTtbRo0fVq1cvd5YMAABKEJsxxri7iD8KCAjQlClT1Lt3bwUGBmrevHnq3bu3JOl///ufIiIitGnTJjVv3rxQ46Wnp8vf319paWlyOBzFW2zytuIdD9bTtol7X59jEO4+BoFrpLC/v0vMHJmcnBy99957yszMVIsWLbR9+3ZduHBBkZGRzj61a9dWlSpVtGnTpgLHycrKUnp6ussDAADcmNweZL799lv5+fnJbrfr4Ycf1pIlS1SnTh0dP35cnp6eKleunEv/SpUq6fjx4wWOl5CQIH9/f+cjLCzsGm8BAABwF7cHmVtuuUU7d+7Uli1bNHz4cMXExOj7778v8nhxcXFKS0tzPg4fPlyM1QIAgJKktLsL8PT0VM2aNSVJjRs31tatW/Xiiy+qb9++ys7O1unTp13Oypw4cULBwcEFjme322W326912QAAoARw+xmZP8vNzVVWVpYaN26sMmXKaM2aNc5lKSkpOnTokFq0aOHGCgEAQEnh1jMycXFx6tKli6pUqaIzZ85o3rx5WrdunVauXCl/f38NGTJEo0ePVkBAgBwOhx599FG1aNGi0HcsAQCAG5tbg8zJkyc1cOBAHTt2TP7+/mrQoIFWrlypjh07SpKmT58uDw8PRUdHKysrS1FRUZo5c6Y7SwYAACVIifscmeLG58jgmnL3Z3hwDMLdxyBwjVjuc2QAAACuFkEGAABYFkEGAABYFkEGAABYFkEGAABYFkEGAABYFkEGAABYFkEGAABYFkEGAABYFkEGAABYFkEGAABYFkEGAABYFkEGAABYFkEGAABYFkEGAABYFkEGAABYFkEGAABYFkEGAABYFkEGAABYFkEGAABYFkEGAABYFkEGAABYFkEGAABYFkEGAABYFkEGAABYVpGDzL59+/T000+rf//+OnnypCTp008/1XfffVdsxQEAAFxOkYJMcnKy6tevry1btmjx4sXKyMiQJO3atUtjx44t1gIBAAAKUqQg8+9//1vPPfecVq1aJU9PT2f7HXfcoc2bNxdbcQAAAJdTpCDz7bff6u67787THhQUpF9//fUvFwUAAFAYRQoy5cqV07Fjx/K079ixQzfddNNfLgoAAKAwihRk+vXrpzFjxuj48eOy2WzKzc3Vhg0b9Pjjj2vgwIGFHichIUG33XabypYtq6CgIPXs2VMpKSkufdq1ayebzebyePjhh4tSNgAAuMEUKchMnDhRtWvXVlhYmDIyMlSnTh21adNGLVu21NNPP13ocZKTkxUbG6vNmzdr1apVunDhgjp16qTMzEyXfkOHDtWxY8ecjxdeeKEoZQMAgBtM6aKs5OnpqTfeeEPPPPOMdu/erYyMDP3jH/9QrVq1rmqcFStWuDxPTExUUFCQtm/frjZt2jjbfXx8FBwcXJRSAQDADaxIQeaSKlWqqEqVKsVVi9LS0iRJAQEBLu1JSUl69913FRwcrO7du+uZZ56Rj49Psb0uAACwpkIHmdGjR2vChAny9fXV6NGjL9vXz89PdevWVe/evVWqVKlCjZ+bm6uRI0eqVatWqlevnrP93nvvVdWqVRUaGqpvvvlGY8aMUUpKihYvXpzvOFlZWcrKynI+T09PL9TrAwAA6yl0kNmxY4cuXLjg/PflZGVl6cUXX9Qnn3yiuXPnFmr82NhY7d69W19++aVL+7Bhw5z/rl+/vkJCQtShQwft27dP4eHhecZJSEhQfHx8oV4TAABYm80YY67FwNu2bVOHDh2cl4su55FHHtGyZcu0fv16Va9e/bJ9MzMz5efnpxUrVigqKirP8vzOyISFhSktLU0Oh+PqN+RykrcV73iwnrZN3Pv6HINw9zEIXCPp6eny9/e/4u/vvzRH5nIaNGigt99++7J9jDF69NFHtWTJEq1bt+6KIUaSdu7cKUkKCQnJd7ndbpfdbr/qegEAgPUUOcj8/PPP+vDDD3Xo0CFlZ2e7LJs2bZo8PT3Vo0ePy44RGxurefPmadmyZSpbtqyOHz8uSfL395e3t7f27dunefPmqWvXrqpQoYK++eYbjRo1Sm3atFGDBg2KWjoAALhBFCnIrFmzRnfddZdq1Kih//3vf6pXr54OHDggY4waNWpU6HFmzZol6fcPvfujOXPmaNCgQfL09NTq1as1Y8YMZWZmKiwsTNHR0Vf1WTUAAODGVaQgExcXp8cff1zx8fEqW7asFi1apKCgIA0YMECdO3cu9DhXmp4TFham5OTkopQIAAD+Bor0yb4//PCD86sISpcurXPnzsnPz0/jx4/X5MmTi7VAAACAghQpyPj6+jrnxYSEhGjfvn3OZXz7NQAAuF6KdGmpefPm+vLLLxUREaGuXbvqscce07fffqvFixerefPmxV0jAABAvooUZKZNm6aMjAxJUnx8vDIyMvT++++rVq1amjZtWrEWCAAAUJAiBZkaNWo4/+3r66tXX3212AoCAAAorCLNkalRo4ZSU1PztJ8+fdol5AAAAFxLRQoyBw4cUE5OTp72rKwsHTly5C8XBQAAUBhXdWnpww8/dP575cqV8vf3dz7PycnRmjVrVK1atWIrDgAA4HKuKsj07NlTkmSz2RQTE+OyrEyZMqpWrZqmTp1abMUBAABczlUFmdzcXElS9erVtXXrVlWsWPGaFAUAAFAYRbpraf/+/cVdBwAAwFUr8rdfr1mzRmvWrNHJkyedZ2oueeutt/5yYQAAAFdSpCATHx+v8ePHq0mTJgoJCZHNZivuugAAAK6oSEHm1VdfVWJiou6///7irgcAAKDQivQ5MtnZ2WrZsmVx1wIAAHBVihRkHnzwQc2bN6+4awEAALgqRbq0dP78eb3++utavXq1GjRooDJlyrgs54sjAQDA9VCkIPPNN9/o1ltvlSTt3r3bZRkTfwEAwPVSpCCzdu3a4q4DAGBVydvcXQHcqW0Tt758kebIXLJ3716tXLlS586dkyQZY4qlKAAAgMIoUpBJTU1Vhw4ddPPNN6tr1646duyYJGnIkCF67LHHirVAAACAghQpyIwaNUplypTRoUOH5OPj42zv27evVqxYUWzFAQAAXE6R5sh89tlnWrlypSpXruzSXqtWLR08eLBYCgMAALiSIp2RyczMdDkTc8lvv/0mu93+l4sCAAAojCIFmdtvv11vv/2287nNZlNubq5eeOEFtW/fvtiKAwAAuJwiXVp64YUX1KFDB23btk3Z2dl68skn9d133+m3337Thg0birtGAACAfBXpjEy9evX0448/qnXr1urRo4cyMzPVq1cv7dixQ+Hh4cVd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2X4lOsh4enqqcePGWrNmjXr27Cnp92CyZs0aPfLII/muY7fbZbfbXdrKlSt3jSv9e3M4HPwHhltxDMLdOAavjcudibmkRAcZSRo9erRiYmLUpEkTNW3aVDNmzFBmZqYGDx7s7tIAAICblfgg07dvX/3yyy969tlndfz4cd16661asWJFngnAAADg76fEBxlJeuSRRwq8lAT3sdvtGjt2bJ5LecD1wjEId+MYdD+budJ9TQAAACVUif5APAAAgMshyAAAAMsiyKBYrVy5UnPmzHF3GQCAvwmCDIrNrl279OCDD6p58+buLgUA8DdBkEGh/fLLLxo+fLiqVKkiu92u4OBgRUVFacOGDTp16pQGDBig9957TxEREe4uFTeQQYMGyWazadKkSS7tS5cu5dO6USibNm1SqVKl1K1bN3eXgmuAIINCi46O1o4dOzR37lz9+OOP+vDDD9WuXTulpqaqfPny2r17t1q1auXuMnED8vLy0uTJk3Xq1Cl3lwILmj17th599FGtX79eR48edXc5KGYEGRTK6dOn9cUXX2jy5Mlq3769qlatqqZNmyouLk533XWXJMlms2np0qXuLRQ3pMjISAUHByshIaHAPosWLVLdunVlt9tVrVo1TZ069TpWiJIqIyND77//voYPH65u3bopMTHxsv2feuopNWvWLE97w4YNNX78eOfzN998UxEREfLy8lLt2rU1c+ZMl/4///yz+vfvr4CAAPn6+qpJkybasmWLc/myZcvUqFEjeXl5qUaNGoqPj9fFixcl/f4dQ+PGjXOe/Q4NDdWIESP+wl64wRmgEC5cuGD8/PzMyJEjzfnz5/PtI8ksWbLk+haGG15MTIzp0aOHWbx4sfHy8jKHDx82xhizZMkSc+lH2LZt24yHh4cZP368SUlJMXPmzDHe3t5mzpw5bqwcJcHs2bNNkyZNjDHGLF++3ISHh5vc3NwC++/evdtIMnv37s3TtmfPHmOMMe+++64JCQkxixYtMj/99JNZtGiRCQgIMImJicYYY86cOWNq1Khhbr/9dvPFF1+YPXv2mPfff99s3LjRGGPM+vXrjcPhMImJiWbfvn3ms88+M9WqVTPjxo0zxhizYMEC43A4zCeffGIOHjxotmzZYl5//fVrsn9uBAQZFNrChQtN+fLljZeXl2nZsqWJi4szu3btci4nyOBauBRkjDGm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\n"
+          },
+          "metadata": {}
+        }
+      ]
+    }
+  ]
+}
