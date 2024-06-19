@@ -1,0 +1,18 @@
+# La evolución del Ecommerce en Chile: Cómo facilita la vida de las mujeres trabajadoras
+
+El comercio electrónico en Chile ha experimentado un crecimiento exponencial, especialmente en los últimos años, impulsado en gran parte por la pandemia de COVID-19. Este fenómeno no solo ha transformado la manera en que los chilenos compran y venden productos, sino que también ha influido significativamente en la vida de muchos, particularmente en la de las mujeres trabajadoras. Es por esto que es importante el papel crucial que han jugado las mujeres en este proceso y el contexto histórico que ha facilitado esta transición.
+
+Chile ha recorrido un largo camino en su proceso de modernización. Desde la implementación de reformas económicas en las décadas de 1980 y 1990, el país ha visto un crecimiento sostenido en infraestructura y acceso a tecnologías de la información. La llegada del internet de alta velocidad y la adopción masiva de dispositivos móviles han sentado las bases para una economía digital próspera.
+
+La pandemia de COVID-19 aceleró muchos de estos procesos. Las restricciones y el confinamiento llevaron a un incremento en la demanda de servicios digitales y compras en línea, haciendo del eCommerce una necesidad más que una opción. Según el informe de eCommerce presentado en el glever SUMMIT 2023, el uso de plataformas de comercio electrónico en Chile se incrementó significativamente durante los años de la pandemia, alcanzando niveles sin precedentes. En un estudio de Kobai llamado El Boom del Delivery descubrió que un 42,3% de los chilenos acostumbra a pedir por delivery, ya sea comida rapida, productos del sumermercado, medicamentos u otros.
+
+Antes de la pandemia, el eCommerce ya mostraba signos de crecimiento, pero fue en 2020 cuando se disparó. Según datos del Servicio de Impuestos Internos (SII), el número de empresas especializadas en venta minorista online en Chile aumentó drásticamente. En 2019, había alrededor de 5,213 empresas de este tipo, y para 2022, el número se había triplicado, alcanzando más de 15,915.
+
+## Impacto en la Vida de las Mujeres Trabajadoras
+Uno de los aspectos más interesantes del auge del eCommerce en Chile es su impacto en las mujeres trabajadoras. Muchas mujeres, especialmente aquellas que son madres y jefas de hogar, han encontrado en el eCommerce una solución a sus problemas de tiempo y movilidad. Las compras en línea y los servicios de delivery han permitido a estas mujeres equilibrar mejor sus responsabilidades laborales y familiares.
+
+El informe del glever SUMMIT 2023 destaca que un porcentaje significativo de las compras en línea en Chile es realizado por mujeres. Este comportamiento se debe a varios factores, como la falta de tiempo para visitar tiendas físicas y la conveniencia de recibir productos en la puerta de su hogar. Además, el comercio electrónico ha ofrecido a muchas mujeres emprendedoras una plataforma para iniciar sus propios negocios, contribuyendo a su independencia económica y empoderamiento.
+
+El eCommerce en Chile ha evolucionado rápidamente, impulsado por la pandemia y la necesidad de modernización. Este fenómeno ha transformado la vida de muchas personas, especialmente la de las mujeres trabajadoras, al ofrecerles una mayor conveniencia y oportunidades económicas. A medida que el país sigue avanzando en modernización, el eCommerce seguirá siendo una fuerza clave.
+
+Hoy, Chile se encuentra en una posición privilegiada para continuar liderando en el ámbito del comercio electrónico en América Latina, aprovechando las tecnologías emergentes y las nuevas tendencias del mercado para seguir creciendo y evolucionando.
