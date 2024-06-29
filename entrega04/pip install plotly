@@ -1,0 +1,22 @@
+
+# Datos de ejemplo
+x = [1,2,3,4,5]
+y = [2,3,5,7,11]
+
+# Crear figura y añadir un scatter plot
+fig = go.Figure(data=go.Scatter(x=x, y=y, mode='markers', marker=dict(color='blue', size=10)))
+
+# Personalizar diseño del gráfico
+fig.update_layout(
+    title='Gráfico de dispersión con Plotly',
+    xaxis_title='Eje X',
+    yaxis_title='Eje Y',
+    showlegend=True,
+    plot_bgcolor='white',  # Color de fondo del gráfico
+    hovermode='closest'    # Modo de interacción al pasar el ratón sobre los puntos
+)
+
+# Mostrar el gráfico
+fig.show(show)
+
+
