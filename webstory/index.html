@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webstory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Mi Webstory</h1>
+    <div id="visualization"></div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Evolución del Ecommerce en Chile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>La Evolución del Ecommerce en Chile</h1>
+        <p>Cómo facilita la vida de las mujeres trabajadoras</p>
+    </header>
+    <section id="introduction">
+        <h2>Introducción</h2>
+        <p>El comercio electrónico en Chile ha experimentado un crecimiento exponencial, especialmente en los últimos años, impulsado en gran parte por la pandemia de COVID-19...</p>
+    </section>
+    <section id="growth">
+        <h2>Crecimiento del eCommerce</h2>
+        <p>Desde la implementación de reformas económicas en las décadas de 1980 y 1990, Chile ha visto un crecimiento sostenido en infraestructura y acceso a tecnologías de la información...</p>
+        <div id="chart-growth"></div>
+    </section>
+    <section id="impact">
+        <h2>Impacto en la Vida de las Mujeres Trabajadoras</h2>
+        <p>Uno de los aspectos más interesantes del auge del eCommerce en Chile es su impacto en las mujeres trabajadoras...</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 La Evolución del Ecommerce en Chile</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Evolución del Ecommerce en Chile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>La Evolución del Ecommerce en Chile</h1>
+        <p>Cómo facilita la vida de las mujeres trabajadoras</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introducción</a></li>
+            <li><a href="#growth">Crecimiento</a></li>
+            <li><a href="#impact">Impacto</a></li>
+        </ul>
+    </nav>
+    <section id="introduction">
+        <h2>Introducción</h2>
+        <p>El comercio electrónico en Chile ha experimentado un crecimiento exponencial, especialmente en los últimos años, impulsado en gran parte por la pandemia de COVID-19...</p>
+    </section>
+    <section id="growth">
+        <h2>Crecimiento del eCommerce</h2>
+        <p>Desde la implementación de reformas económicas en las décadas de 1980 y 1990, Chile ha visto un crecimiento sostenido en infraestructura y acceso a tecnologías de la información...</p>
+        <canvas id="growthChart" width="400" height="200"></canvas>
+    </section>
+    <section id="impact">
+        <h2>Impacto en la Vida de las Mujeres Trabajadoras</h2>
+        <p>Uno de los aspectos más interesantes del auge del eCommerce en Chile es su impacto en las mujeres trabajadoras...</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 La Evolución del Ecommerce en Chile</p>
+    </footer>
+    <script src="chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+nav {
+    background: #444;
+    color: #fff;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 2rem;
+    background: #fff;
+    margin: 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+#growthChart {
+    max-width: 100%;
+}
+
+
+
