@@ -1,0 +1,99 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Gráfico interactivo para "8 de cada 10 chilenos compra online"
+    const chileansBuyOnlineCtx = document.getElementById('chileansBuyOnlineChart').getContext('2d');
+    const chileansBuyOnlineChart = new Chart(chileansBuyOnlineCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Chilenos que compran online', 'Chilenos que no compran online'],
+            datasets: [{
+                label: 'Porcentaje',
+                data: [80, 20],
+                backgroundColor: ['#FF0000', '#00FF00'], // Rojo y verde
+                borderColor: ['#FF0000', '#00FF00'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+
+    // Gráfico interactivo para "Volumen del eCommerce en Chile en 2021"
+    const ecommerceVolumeCtx = document.getElementById('ecommerceVolumeChart').getContext('2d');
+    const ecommerceVolumeChart = new Chart(ecommerceVolumeCtx, {
+        type: 'pie',
+        data: {
+            labels: ['Volumen del eCommerce en 2021'],
+            datasets: [{
+                label: 'Volumen ($16 billones)',
+                data: [16, 84], // 16% para ilustrar el volumen
+                backgroundColor: ['#FF0000', '#CCCCCC'], // Rojo y gris claro
+                borderColor: ['#FF0000', '#CCCCCC'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+
+    // Gráfico interactivo para "62% de los compradores online son personas entre 26 y 55 años"
+    const onlineBuyersCtx = document.getElementById('onlineBuyersChart').getContext('2d');
+    const onlineBuyersChart = new Chart(onlineBuyersCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['26-55 años', 'Otras edades'],
+            datasets: [{
+                label: 'Porcentaje',
+                data: [62, 38],
+                backgroundColor: ['#FF0000', '#0000FF'], // Rojo y azul
+                borderColor: ['#FF0000', '#0000FF'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+});
+
+%%javascript
+// Cargar la biblioteca Chart.js (puedes incluirla desde un CDN)
+// ... código para cargar Chart.js ...
+
+// Datos
+var datos = [80, 16, 62];
+var etiquetas = ["Compran online", "Volumen Ecommerce 2021 (billones USD)", "Compradores online entre..."];
+
+// Crear el gráfico
+var ctx = document.createElement('canvas');
+document.body.appendChild(ctx);
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: etiquetas,
+        datasets: [{
+            label: 'Estado actual del Ecommerce en Chile',
+            data: datos,
+            backgroundColor: 'blue',
+            borderColor: 'blue',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Evolución del Ecommerce en Chile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1> Ecommerce en Chile</h1>
+        <p> Mujeres chilenas y la compra online: Beneficios e impacto</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#Chile y el ecommers">Chile y el Ecommers</a></li>
+            <li><a href="#Las mujeres y el ecommers en Chile">Las mujeres y el ecommers en Chile</a></li>
+            <li><a href="#Compra online vs Tiendas fisicas">Compra online vs tiendas fisicas</a></li>
+            <li><a href="#Impacto del Ecommers: Tallajes">impacto del Ecommers: Tallajes</a></li>
+            </ul>
+    </nav>
+    
+
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comercio Electrónico en Chile 2022</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<section id="">
+    <div class="intro-container"> 
+        <h2></h2>
+        <p>Chile ha recorrido un largo camino en su proceso de modernización. Desde la implementación de reformas económicas en las décadas de 1980 y 1990, el país ha visto un crecimiento sostenido en infraestructura y acceso a tecnologías de la información. La llegada del internet de alta velocidad y la adopción masiva de dispositivos móviles han sentado las bases para una economía digital próspera.</p>
+        <p>La pandemia de COVID-19 aceleró muchos de estos procesos. Las restricciones y el confinamiento llevaron a un incremento en la demanda de servicios digitales y compras en línea, haciendo del eCommerce una necesidad más que una opción. Según el informe de eCommerce presentado en el glever SUMMIT 2023, el uso de plataformas de comercio electrónico en Chile se incrementó significativamente durante los años de la pandemia, alcanzando niveles sin precedentes. En un estudio de Kobai llamado El Boom del Delivery descubrió que un 42,3% de los chilenos acostumbra a pedir por delivery, ya sea comida rapida, productos del sumermercado, medicamentos u otros.</p>
+  <p> El comercio electrónico en Chile ha experimentado un crecimiento exponencial, especialmente en los últimos años, impulsado en gran parte por la pandemia de COVID-19. Este fenómeno no solo ha transformado la manera en que los chilenos compran y venden productos, sino que también ha influido significativamente en la vida de muchos, particularmente en la de las mujeres trabajadoras. Es por esto que es importante el papel crucial que han jugado las mujeres en este proceso y el contexto histórico que ha facilitado esta transición. Chile ha recorrido un largo camino en su proceso de modernización. Desde la implementación de reformas económicas en las décadas de 1980 y 1990, el país ha visto un crecimiento sostenido en infraestructura y acceso a tecnologías de la información. La llegada del internet de alta velocidad y la adopción masiva de dispositivos móviles han sentado las bases para una economía digital próspera.</p>
+    </div>
+</section>
+
+
+        <html>
+        <head>
+        <title>Frases con Porcentajes</title>
+        <style>
+        .frase {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        .porcentaje {
+          font-size: 36px;
+          color: #000080; /* Azul marino */
+          font-weight: bold;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <div class="frase">
+          <p>8 de cada 10 chilenos compran online.</p>
+          <p class="porcentaje">80%</p>
+        </div>
+        
+        <div class="frase">
+          <p>El volumen del Ecommerce en Chile en 2021 es de</p>
+          <p class="porcentaje">16$ billones de dólares</p>
+        </div>
+        
+        <div class="frase">
+          <p>El 62% de los compradores online son personas entre...</p>
+          <p class="porcentaje">26 a 55 años</p>
+        </div>
+        
+        </body>
+        </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Gráfico de Barras Doble</title>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        </head>
+
+
+        <div class="grafico-container">
+            <h1>Las mujeres compran más en casi todas las categorías en comparación de los hombres</h1>
+            <canvas id="myChart"></canvas>
+        </div>
+
+        <body>
+            <canvas id="myChart"></canvas>
+            <script>
+                // Datos del gráfico
+                const data = {
+                    labels: ['Ocio', 'Moda', 'Estilo de Vida Saludable', 'Hogar', 'Nutrición'],
+                    datasets: [
+                        {
+                            label: 'Mujeres',
+                            data: [67, 64, 63, 59, 59],
+                            backgroundColor: 'rgba(148, 0, 211, 0.5)', // Morado pastel
+                            borderColor: 'rgba(148, 0, 211, 1)',
+                            borderWidth: 0.3
+                        },
+                        {
+                            label: 'Hombres',
+                            data: [33, 36, 37, 41, 41],
+                            backgroundColor: 'rgba(75, 0, 130, 0.5)', // Morado oscuro
+                            borderColor: 'rgba(75, 0, 130, 1)',
+                            borderWidth: 0.3
+                        }
+                    ]
+                };
+        
+                // Configuración del gráfico
+                const config = {
+                    type: 'bar',
+                    data: data,
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100, // Para mostrar porcentajes
+                                ticks: {
+                                    callback: function(value) {
+                                        return value + '%'; // Agregar el símbolo de porcentaje
+                                    }
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: true,
+                                position: 'top'
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return context.dataset.label + ': ' + context.parsed.y + '%';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                };
+        
+                // Crear el gráfico
+                const myChart = new Chart(
+                    document.getElementById('myChart'),
+                    config
+                );
+            </script>
+        </body>
+        </html>
+
+        
+
+
+
+    
+    <section id="growth">
+        <h2>Crecimiento del eCommerce</h2>
+        <p>Desde la implementación de reformas económicas en las décadas de 1980 y 1990, Chile ha visto un crecimiento sostenido en infraestructura y acceso a tecnologías de la información...</p>
+        <canvas id="growthChart" width="400" height="200"></canvas>
+    </section>
+    <section id="impact">
+        <h2>Impacto en la Vida de las Mujeres Trabajadoras</h2>
+        <p>Uno de los aspectos más interesantes del auge del eCommerce en Chile es su impacto en las mujeres trabajadoras...</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 La Evolución del Ecommerce en Chile</p>
+    </footer>
+    <script src="chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
