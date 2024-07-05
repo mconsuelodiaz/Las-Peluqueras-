@@ -1,22 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Evolución del Ecommerce en Chile</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1> Ecommerce en Chile</h1>
-        <p> Mujeres chilenas y la compra online: Beneficios e impacto</p>
+        <p> Mujeres chilenas y la compra online: Beneficios y desventajas</p>
     </header>
     <nav>
         <ul>
-            <li><a href="#Chile y el ecommers">Chile y el Ecommers</a></li>
-            <li><a href="#Las mujeres y el ecommers en Chile">Las mujeres y el ecommers en Chile</a></li>
-            <li><a href="#Compra online vs Tiendas fisicas">Compra online vs tiendas fisicas</a></li>
-            <li><a href="#Impacto del Ecommers: Tallajes">impacto del Ecommers: Tallajes</a></li>
+            <li><a href="#Chile y el Ecommerce">Chile y el Ecommerce</a></li>
+            <li><a href="#Las mujeres chilenas y el Ecommerce">Las mujeres chilenas y el Ecommerce</a></li>
+            <li><a href="#Compra online vs Tiendas físicas">Compra online v/s Tiendas físicas</a></li>
+            <li><a href="#Desafío del Ecommerce: Tallajes">Desafío del Ecommerce: Tallajes</a></li>
             </ul>
     </nav>
     
@@ -31,8 +25,9 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<section id="">
-    <div class="intro-container"> 
+<section id=""> 
+    <p style="font-family: Cormorandt Garamond; font-size: 30px;">
+     <div class="intro-container"> 
         <h2></h2>
         <p>Chile ha recorrido un largo camino en su proceso de modernización. Desde la implementación de reformas económicas en las décadas de 1980 y 1990, el país ha visto un crecimiento sostenido en infraestructura y acceso a tecnologías de la información. La llegada del internet de alta velocidad y la adopción masiva de dispositivos móviles han sentado las bases para una economía digital próspera.</p>
         <p>La pandemia de COVID-19 aceleró muchos de estos procesos. Las restricciones y el confinamiento llevaron a un incremento en la demanda de servicios digitales y compras en línea, haciendo del eCommerce una necesidad más que una opción. Según el informe de eCommerce presentado en el glever SUMMIT 2023, el uso de plataformas de comercio electrónico en Chile se incrementó significativamente durante los años de la pandemia, alcanzando niveles sin precedentes. En un estudio de Kobai llamado El Boom del Delivery descubrió que un 42,3% de los chilenos acostumbra a pedir por delivery, ya sea comida rapida, productos del sumermercado, medicamentos u otros.</p>
@@ -51,7 +46,7 @@
         }
         .porcentaje {
           font-size: 36px;
-          color: #000080; /* Azul marino */
+          color: deeppink;
           font-weight: bold;
         }
         </style>
@@ -65,7 +60,7 @@
         
         <div class="frase">
           <p>El volumen del Ecommerce en Chile en 2021 es de</p>
-          <p class="porcentaje">16$ billones de dólares</p>
+          <p class="porcentaje">$16 billones de dólares</p>
         </div>
         
         <div class="frase">
@@ -77,20 +72,6 @@
         </html>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <!DOCTYPE html>
         <html>
         <head>
@@ -99,7 +80,7 @@
         </head>
 
 
-        <div class="grafico-container">
+ <div class="grafico-container">
             <h1>Las mujeres compran más en casi todas las categorías en comparación de los hombres</h1>
             <canvas id="myChart"></canvas>
         </div>
@@ -114,15 +95,15 @@
                         {
                             label: 'Mujeres',
                             data: [67, 64, 63, 59, 59],
-                            backgroundColor: 'rgba(148, 0, 211, 0.5)', // Morado pastel
-                            borderColor: 'rgba(148, 0, 211, 1)',
+                            backgroundColor: 'LightPink', 
+                            borderColor: 'LightPink',
                             borderWidth: 0.3
                         },
                         {
                             label: 'Hombres',
                             data: [33, 36, 37, 41, 41],
-                            backgroundColor: 'rgba(75, 0, 130, 0.5)', // Morado oscuro
-                            borderColor: 'rgba(75, 0, 130, 1)',
+                            backgroundColor: 'HotPink', // Morado oscuro
+                            borderColor: 'HotPink',
                             borderWidth: 0.3
                         }
                     ]
@@ -158,39 +139,251 @@
                             }
                         }
                     }
-                };
-        
-                // Crear el gráfico
+                }
+    
                 const myChart = new Chart(
                     document.getElementById('myChart'),
                     config
                 );
             </script>
-        </body>
-        </html>
+      
 
-        
-
-
-
-    
+        <!DOCTYPE html>
     <section id="growth">
-        <h2>Crecimiento del eCommerce</h2>
-        <p>Desde la implementación de reformas económicas en las décadas de 1980 y 1990, Chile ha visto un crecimiento sostenido en infraestructura y acceso a tecnologías de la información...</p>
+        <h2>MALL VS COMPRAS ONLINE</h2>
+        <p></p>
         <canvas id="growthChart" width="400" height="200"></canvas>
-    </section>
+    </section>Durante la pandemia hubo un alza del ecommers debido al confinamiento en el que la gente se vio inmersa y hoy en día a pesar de que el crecimiento de las compras online deberia ser exponencial, este ha ido en disminución, ya que hay gran parte de la población que sigue prefiriendo la compra presencial. ¿Por qué?
     <section id="impact">
-        <h2>Impacto en la Vida de las Mujeres Trabajadoras</h2>
-        <p>Uno de los aspectos más interesantes del auge del eCommerce en Chile es su impacto en las mujeres trabajadoras...</p>
+        <h2>El impedimento del desarrollo del ecommers </h2>
+        <p> En particular, se ha observado un aumento en la participación de las mujeres en el comercio electrónico en Chile en los últimos años. Factores como el mayor acceso a la tecnología y dispositivos en los hogares, la mayor confianza en las transacciones en línea y el crecimiento de emprendimientos liderados por mujeres en el ámbito digital han contribuido a este fenómeno. Según datos de la Cámara de Comercio de Santiago (CCS), se estima que alrededor del 60% de los compradores en línea en Chile son mujeres, lo que muestra un incremento significativo en comparación con años anteriores.</p>
+    
     </section>
-    <footer>
-        <p>&copy; 2024 La Evolución del Ecommerce en Chile</p>
-    </footer>
-    <script src="chart.min.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Barras</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <section id="Desafios-del-Ecommerce">
+        <h3>Desafíos del e-commerce</h3>
+        <p>Sin embargo, a pesar de este avance, las mujeres chilenas continúan enfrentando desafíos al comprar ropa en línea, particularmente en lo que respecta a la dificultad para encontrar tallas adecuadas. La disparidad en los estándares de tallaje entre las marcas nacionales e internacionales puede ocasionar que las prendas no se ajusten correctamente a las expectativas de las compradoras, generando frustración y desconfianza en el proceso de compra. Esta situación ha sido destacada por la Organización de Consumidores y Usuarios de Chile (ODECU) en su análisis sobre las dificultades en el e-commerce para las consumidoras femeninas en el país.</p>
+    </section>
 
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gráfico de Barras</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=North+Plains&display=swap');
+    
+            body {
+                font-family: 'North Plains', sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                background-color: #111111; /* Fondo negro */
+                color: #FFFFFF; /* Letras blancas */
+                font-size: 18px; /* Tamaño de la letra más grande */
+            }
+    
+            header {
+                background: #ff69b4; /* Fondo rosado */
+                color: #FFFFFF; /* Letras blancas */
+                padding: 2rem 0; /* Más espacio alrededor del encabezado */
+                text-align: center;
+                animation: fadeIn 2s; /* Animación de entrada */
+            }
+    
+            header h1 {
+                margin: 0;
+                font-size: 3rem; /* Tamaño de la letra más grande para el título */
+                margin-bottom: 1rem; /* Espacio debajo del título */
+            }
+    
+            nav {
+                background: #ff69b4; /* Fondo rosado */
+                color: #FFFFFF; /* Letras blancas */
+                padding: 1rem 0; /* Más espacio alrededor de la navegación */
+                text-align: center;
+            }
+    
+            nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+    
+            nav ul li {
+                display: inline;
+                margin-right: 1rem;
+            }
+    
+            nav ul li a {
+                color: #FFFFFF; /* Letras blancas */
+                text-decoration: none;
+                font-weight: bold;
+            }
+    
+            nav ul li a:hover {
+                text-decoration: underline;
+            }
+    
+            section {
+                padding: 3rem 2rem; /* Más espacio alrededor de las secciones */
+                background: #FFFFFF; /* Fondo blanco para secciones */
+                color: #111111; /* Letras negras para secciones */
+                margin: 2rem 2rem; /* Más espacio entre secciones */
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                animation: zoomIn 1.5s; /* Animación de entrada */
+            }
+    
+            footer {
+                background: #ff69b4; /* Fondo rosado */
+                color: #FFFFFF; /* Letras blancas */
+                text-align: center;
+                padding: 2rem 0; /* Más espacio alrededor del pie de página */
+                animation: fadeIn 2s; /* Animación de entrada */
+                margin-top: 2rem; /* Espacio encima del pie de página */
+            }
+    
+            h2 {
+                color: #111111; /* Color de los títulos */
+                margin-top: 0;
+                margin-bottom: 2rem; /* Más espacio debajo de los títulos */
+            }
+    
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+    
+            @keyframes zoomIn {
+                from { transform: scale(0.5); }
+                to { transform: scale(1); }
+            }
+    
+            .grafico-info-container {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 2rem; /* Espacio entre el gráfico y el cuadro de información */
+                width: 80%; /* Ancho del contenedor del gráfico */
+                margin: 0 auto; /* Centra el contenedor */
+                text-align: center;
+                margin-bottom: 2rem; /* Más espacio debajo del contenedor del gráfico */
+            }
+    
+            #miGraficoBarras {
+                width: 100%; /* Ajusta este valor para controlar el ancho */
+                max-width: 600px; /* Limita el ancho máximo del gráfico */
+                height: 400px; /* Ajusta este valor para controlar la altura */
+            }
+    
+            .info-cuadro {
+                background: #f8f9fa; /* Fondo suave */
+                color: #111111; /* Color de texto negro */
+                padding: 1rem;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                max-width: 400px; /* Ancho máximo del cuadro de información */
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Desafíos del E-commerce en tallaje</h1>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="#Desafios">Desafíos</a></li>
+                <li><a href="#Grafico">Gráfico</a></li>
+            </ul>
+        </nav>
+    
+        <section id="Desafios">
+            <h2>Desafíos del Ecommerce en tallaje</h2>
+            <p> EN DESARROLLO DE GRAFICO </p>
+        </section>
+    
+        <div class="grafico-info-container" id="Grafico">
+            <div class="grafico-container">
+                <h2>Rango de anchura de cintura de los jeans que venden las tiendas de retail en Chile</h2>
+                <canvas id="miGraficoBarras" width="400" height="200"></canvas>
+            </div>
+            <div class="info-cuadro">
+                <p>Aunque el e-commerce en Chile ha experimentado un crecimiento notable con una mayor participación de las mujeres, la cuestión de las tallas de ropa sigue siendo un desafío que puede afectar la experiencia de compra en línea de las mujeres en el país.</p>
+            </div>
+        </div>
+    
+        <script>
+            // Obtener el contexto del canvas donde se dibujará el gráfico
+            var ctx = document.getElementById('miGraficoBarras').getContext('2d');
+    
+            // Crear el gráfico de barras
+            var miGraficoBarras = new Chart(ctx, {
+                type: 'bar', // Tipo de gráfico: barras
+                data: {
+                    labels: ['S', 'M', 'L', 'XL'], // Etiquetas para las barras
+                    datasets: [
+                        {
+                            label: 'Versión más grande de la tallas',
+                            data: [88, 92, 103, 105], // Datos de cada barra
+                            backgroundColor: 'HotPink',
+                            borderColor: 'HotPink',
+                            borderWidth: 1 // Ancho del borde de las barras
+                        },
+                        {
+                            label: 'Versión más pequeña de la tallas',
+                            data: [57, 61, 65, 68],
+                            backgroundColor: 'LightPink',
+                            borderColor: 'LightPink',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true // Comienza el eje Y en 0
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                font: {
+                                    size: 16 // Tamaño de la fuente de la leyenda
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        </script>
+    
+        <footer>
+            <p>s</p>
+        </footer>
+    </body>
+    </html>
+    
 
+</div>
+<div class="info-cuadro">
+    <p>Aunque el e-commerce en Chile ha experimentado un crecimiento notable con una mayor participación de las mujeres, la cuestión de las tallas de ropa sigue siendo un desafío que puede afectar la experiencia de compra en línea de las mujeres en el país.</p>
+</div>
+</div>
 
+<script>

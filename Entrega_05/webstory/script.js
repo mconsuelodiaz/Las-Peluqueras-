@@ -153,16 +153,11 @@ document.addEventListener('DOMContentLoaded', function() {
                             data: [16, 84], // 16% para ilustrar el volumen
                             backgroundColor: ['#FF0000', '#CCCCCC'], // Rojo y gris claro
                             borderColor: ['#FF0000', '#CCCCCC'],
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false
-                    }
+                            borderWidth: 1}]},
+                    options: {responsive: true,
+                 maintainAspectRatio: false }
                 });
-            
-                // Gráfico interactivo para "62% de los compradores online son personas entre 26 y 55 años"
+             // Gráfico interactivo para "62% de los compradores online son personas entre 26 y 55 años"
                 const onlineBuyersCtx = document.getElementById('onlineBuyersChart').getContext('2d');
                 const onlineBuyersChart = new Chart(onlineBuyersCtx, {
                     type: 'doughnut',
@@ -181,7 +176,39 @@ document.addEventListener('DOMContentLoaded', function() {
                         maintainAspectRatio: false
                     }
                 });
-            });
+            })
+            
+           
+           
 
             
-
+            tallas = ['S mayor', 'S menor', 'M mayor', 'M menor', 'L mayor', 'L menor', 'XL mayor', 'XL menor'] #Años
+            medidas = [88, 57, 92, 61, 103, 65, 105, 68]  # Porcentajes para el grupo A en cada año
+            
+            # Crear el gráfico de barras apiladas
+            plt.figure(figsize=(14, 5))
+            plt.bar(tallas, medidas)
+            
+            posiciones_tallas = [0.1, 1, 2, 3, 4] 
+            
+            # Barras para cada grupo de personas
+            plt.bar('S mayor', 88, color='SteelBlue') 
+            plt.bar('S menor', 57, color='LightSteelBlue')
+            plt.bar('M mayor', 92, color='SteelBlue')
+            plt.bar('M menor', 61, color='LightSteelBlue')
+            plt.bar('L mayor', 103, color='SteelBlue')
+            plt.bar('L menor', 65, color='LightSteelBlue')
+            plt.bar('XL mayor', 105,  color='SteelBlue')
+            plt.bar('XL menor', 68, color='LightSteelBlue')
+            
+            # Personalizar el gráfico
+            plt.xlabel('Límites de anchura de cintura de cada talla de jeans', fontsize=22)
+            plt.ylabel('Medidas en centímetro', fontsize=22) 
+            plt.title('Rango de anchura de cintura de los jeans que venden las tiendas de retail en Chile', fontsize=22)
+            
+            # Convert the plot to HTML using mpld3
+            html_str = mpld3.fig_to_html(plt.gcf())  
+            
+            # Save the HTML to a file
+            with open('my_plot.html', 'w') as f:
+                f.write(html_str)

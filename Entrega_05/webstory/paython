@@ -42,93 +42,15 @@ html_content = '''<!DOCTYPE html>
 </body>
 </html>
 '''
+!pip install mpld3
+import matplotlib.pyplot as plt
+   import mpld3 
 
-css_content = '''body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #FFAA00; /* Fondo amarillo oscuro */
-    color: #FFFFFF; /* Letras blancas */
-}
+   # ... (Your existing plotting code) ...
 
-header {
-    background: #333333; /* Fondo del header */
-    color: #FFFFFF; /* Letras blancas */
-    padding: 1.5rem 0;
-    text-align: center;
-}
+   # Convert the plot to HTML
+   html_str = mpld3.fig_to_html(plt.gcf())  
 
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-header p {
-    font-size: 1.2rem;
-}
-
-nav {
-    background: #444444; /* Fondo del nav */
-    color: #FFFFFF; /* Letras blancas */
-    padding: 0.5rem 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 1rem;
-}
-
-nav ul li a {
-    color: #FFFFFF; /* Letras blancas */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-section {
-    padding: 2rem;
-    background: #FFFFFF; /* Fondo blanco para secciones */
-    color: #333333; /* Letras negras para secciones */
-    margin: 1rem 2rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-footer {
-    background: #333333; /* Fondo del footer */
-    color: #FFFFFF; /* Letras blancas */
-    text-align: center;
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-h2 {
-    color: #333333; /* Color de los títulos */
-    margin-top: 0;
-}
-
-#growthChart {
-    max-width: 100%;
-}
-'''
-
-# Crear o sobrescribir archivos HTML y CSS
-with open('docs/index.html', 'w', encoding='utf-8') as file:
-    file.write(html_content)
-
-with open('docs/style.css', 'w', encoding='utf-8') as file:
-    file.write(css_content)
-
+   # Save the HTML to a file
+   with open('my_plot.html', 'w') as f:
+       f.write(html_str)

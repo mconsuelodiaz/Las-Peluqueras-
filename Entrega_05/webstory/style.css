@@ -1,353 +1,211 @@
-body {
-/* Agregar la fuente "" desde Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=North+Plains&display=swap');
-
-/* Agregar la fuente "North Plains" desde Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=North+Plains&display=swap');
-
-body {
-    font-family: 'Helvetica';
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #111111; /*DarkSlateBlue*/
-    color: #FFFFFF; /* Letras blancas */
-}
-
-header {
-    background:#111111; /*DarkSlateBlue*/; /* Fondo del header */
-    color: #FFFFFF; /* Letras blancas */
-    padding: 1.5rem 0;
-    text-align: center;
-    animation: fadeIn 2s; /* Animación de entrada */
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-header p {
-    font-size: 1.2rem;
-}
-
-nav {
-    background: #111111; /* Fondo del nav */
-    color: #FFFFFF; /* Letras blancas */
-    padding: 0.2rem 0;
-    text-align: center;
-    animation: slideIn 1.5s; /* Animación de entrada */
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 1rem;
-}
-
-nav ul li a {
-    color: #FFFFFF; /* Letras blancas */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-section {
-    padding: 2rem;
-    background: ##483D8B; /* Fondo blanco para secciones */
-    color: ##483D8B; /* Letras negras para secciones */
-    margin: 1rem 2rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    animation: zoomIn 1.5s; /* Animación de entrada */
-}
-
-footer {
-    background: ##483D8B; /* Fondo del footer */
-    color: #FFFFFF; /* Letras blancas */
-    text-align: center;
-    padding: 1rem 0;
-    position: fixed;
-    width: 50%;
-    bottom: 0;
-    animation: fadeIn 2s; /* Animación de entrada */
-}
-
-h2 {
-    color: ##483D8B; /* Color de los títulos */
-    margin-top: 0;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideIn {
-    from { transform: translateX(-100%); }
-    to { transform: translateX(0); }
-}
-
-@keyframes zoomIn {
-    from { transform: scale(0.2); }
-    to { transform: scale(0,5); }
-}
-
-#growthChart, #paymentMethodsChart, #productCategoriesChart, #topStoresChart {
-    max-width: 100%;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-}
-
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 1rem;
-}
-
-nav ul li a {
-    color: #FFFFFF; /* Letras blancas */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-section {
-    padding: 2rem;
-    background: #FFFFFF; /* Fondo blanco para secciones */
-    color: #001f3f; /* Letras azul marino oscuro para secciones */
-    margin: 1rem 2rem;
-    border-radius: 3px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    animation: zoomIn 1.5s; /* Animación de entrada */
-}
-
-footer {
-    background: #111111; /* Fondo del footer */
-    color: #FFFFFF; /* Letras blancas */
-    text-align: center;
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    animation: fadeIn 2s; /* Animación de entrada */
-}
-
-h2 {
-    color: #001
-
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-header p {
-    font-size: 1.2rem;
-}
-
-nav {
-    background: #483D8B; /* Fondo del nav */
-    color: #FFFFFF; /* Letras blancas */
-    padding: 0.5rem 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 1rem;
-}
-
-nav ul li a {
-    color: #FFFFFF; /* Letras blancas */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-section {
-    padding: 2rem;
-    background: #FFFFFF; /* Fondo blanco para secciones */
-    color: #483D8B; /* Letras negras para secciones */
-    margin: 1rem 2rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-footer {
-    background: #483D8B; /* Fondo del footer */
-    color: #FFFFFF; /* Letras blancas */
-    text-align: center;
-    padding: 1rem 0;
-    position: fixed;
-    width: 40%;
-    bottom: 0;
-}
-
-h2 {
-    color: #483D8B; /* Color de los títulos */
-    margin-top: 0;
-}
-
-#growthChart {
-    max-width: 50%;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=North+Plains&display=swap');
-
-body {
-    font-family: 'North Plains', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #2F4F6F; /* Fondo azul marino claro */
-    color: #FFFFFF; /* Letras blancas */
-}
-
-header {
-    background: #111111; /* Fondo del header */
-    color: #FFFFFF; /* Letras blancas */
-    padding: 1.5rem 0;
-    text-align: center;
-    animation: fadeIn 2s; /* Animación de entrada */
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-section {
-    padding: 2rem;
-    margin: 1rem 2rem;
-    border-radius: 8px;
-    animation: zoomIn 1.5s; /* Animación de entrada */
-}
-
-.section {
-    background: #FFFFFF; /* Fondo blanco para secciones */
-    color: #333333; /* Letras negras para secciones */
-    padding: 1rem;
-    margin-bottom: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.section h2 {
-    color: #FF0000; /* Letras rojas */
-}
-
-footer {
-    background: #111111; /* Fondo del footer */
-    color: #FFFFFF; /* Letras blancas */
-    text-align: center;
-    padding: 1rem 0;
-    animation: fadeIn 2s; /* Animación de entrada */
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes zoomIn {
-    from { transform: scale(0.5); }
-    to { transform: scale(1); }
-}
-
-#chileansBuyOnlineChart, #ecommerceVolumeChart, #onlineBuyersChart {
-    max-width: 100%;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-}
-
-css
-/* Estilos para la introducción */
-.intro-container {
-    background-color: #f8f9fa; /* Color de fondo suave */
-    padding: 10px;
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra sutil */
-    text-align: center; /* Centrar el texto */
-}
-
-.intro-container h2 {
-    font-size: 3.0em; /* Título más grande */
-    margin-bottom: 10px;
-}
-
-.intro-container p {
-    font-size: 2.0em; /* Texto más grande */
-    line-height: 1.6; /* Espacio entre líneas */
-}
-
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Gráfico de Barras Doble</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Barras</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        .grafico-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 40%;
-            text-align: center; 
+        @import url('https://fonts.googleapis.com/css2?family=North+Plains&display=swap');
+
+        body {
+            font-family: 'North Plains', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #111111; /* Fondo negro */
+            color: #FFFFFF; /* Letras blancas */
+            font-size: 18px; /* Tamaño de la letra más grande */
         }
 
-        #myChart {
-            width: 10px; /* Ajusta este valor para controlar el ancho */
-            height: 10px; /* Ajusta este valor para controlar la altura */
-            max-width: 10%; /* Limita el ancho máximo del gráfico */
+        header {
+            background: #ff69b4; /* Fondo rosado */
+            color: #FFFFFF; /* Letras blancas */
+            padding: 2rem 0; /* Más espacio alrededor del encabezado */
+            text-align: center;
+            animation: fadeIn 2s; /* Animación de entrada */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem; /* Tamaño de la letra más grande para el título */
+            margin-bottom: 1rem; /* Espacio debajo del título */
+        }
+
+        nav {
+            background: #ff69b4; /* Fondo rosado */
+            color: #FFFFFF; /* Letras blancas */
+            padding: 1rem 0; /* Más espacio alrededor de la navegación */
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 1rem;
+        }
+
+        nav ul li a {
+            color: #FFFFFF; /* Letras blancas */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 3rem 2rem; /* Más espacio alrededor de las secciones */
+            background: #FFFFFF; /* Fondo blanco para secciones */
+            color: #111111; /* Letras negras para secciones */
+            margin: 2rem 2rem; /* Más espacio entre secciones */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: zoomIn 1.5s; /* Animación de entrada */
+        }
+
+        footer {
+            background: #ff69b4; /* Fondo rosado */
+            color: #FFFFFF; /* Letras blancas */
+            text-align: center;
+            padding: 2rem 0; /* Más espacio alrededor del pie de página */
+            animation: fadeIn 2s; /* Animación de entrada */
+            margin-top: 2rem; /* Espacio encima del pie de página */
+        }
+
+        h2 {
+            color: #111111; /* Color de los títulos */
+            margin-top: 0;
+            margin-bottom: 2rem; /* Más espacio debajo de los títulos */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.5); }
+            to { transform: scale(1); }
+        }
+
+        .grafico-info-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 2rem; /* Espacio entre el gráfico y el cuadro de información */
+            width: 80%; /* Ancho del contenedor del gráfico */
+            margin: 0 auto; /* Centra el contenedor */
+            text-align: center;
+            margin-bottom: 2rem; /* Más espacio debajo del contenedor del gráfico */
+        }
+
+        #miGraficoBarras {
+            width: 100%; /* Ajusta este valor para controlar el ancho */
+            max-width: 600px; /* Limita el ancho máximo del gráfico */
+            height: 400px; /* Ajusta este valor para controlar la altura */
+        }
+
+        .info-cuadro {
+            background: #f8f9fa; /* Fondo suave */
+            color: #111111; /* Color de texto negro */
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px; /* Ancho máximo del cuadro de información */
+            text-align: left;
         }
     </style>
 </head>
 <body>
-    <div class="grafico-container">
-        <h1>Las mujeres compran más en casi todas las categorías en comparación de los hombres</h1>
-        <canvas id="myChart"></canvas>
+    <header>
+        <h1>Desafíos del E-commerce</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#Desafios">Desafíos</a></li>
+            <li><a href="#Grafico">Gráfico</a></li>
+        </ul>
+    </nav>
+
+    <section id="Desafios">
+        <h2>Desafíos del e-commerce</h2>
+        <p>Sin embargo, a pesar de este avance, las mujeres chilenas continúan enfrentando desafíos al comprar ropa en línea, particularmente en lo que respecta a la dificultad para encontrar tallas adecuadas. La disparidad en los estándares de tallaje entre las marcas nacionales e internacionales puede ocasionar que las prendas no se ajusten correctamente a las expectativas de las compradoras, generando frustración y desconfianza en el proceso de compra. Esta situación ha sido destacada por la Organización de Consumidores y Usuarios de Chile (ODECU) en su análisis sobre las dificultades en el e-commerce para las consumidoras femeninas en el país.</p>
+    </section>
+
+    <div class="grafico-info-container" id="Grafico">
+        <div class="grafico-container">
+            <h2>Rango de anchura de cintura de los jeans que venden las tiendas de retail en Chile</h2>
+            <canvas id="miGraficoBarras"></canvas>
+        </div>
+        <div class="info-cuadro">
+            <p>Aunque el e-commerce en Chile ha experimentado un crecimiento notable con una mayor participación de las mujeres, la cuestión de las tallas de ropa sigue siendo un desafío que puede afectar la experiencia de compra en línea de las mujeres en el país.</p>
+        </div>
     </div>
+
     <script>
-        // Datos del gráfico (los mismos que antes)
-        const data = {
-            labels: ['Ocio', 'Moda', 'Estilo de Vida Saludable', 'Hogar', 'Nutrición'],
-            datasets: [
-                {
-                    label: 'Mujeres',
-                    data: [67, 64, 63, 59, 59],
-                    backgroundColor: 'rgba(148, 0, 211, 0.5)', 
-                    borderColor: 'rgba(148, 0, 211, 1)',
-                    borderWidth: 1
+        // Obtener el contexto del canvas donde se dibujará el gráfico
+        var ctx = document.getElementById('miGraficoBarras').getContext('2d');
+
+        // Crear el gráfico de barras
+        var miGraficoBarras = new Chart(ctx, {
+            type: 'bar', // Tipo de gráfico: barras
+            data: {
+                labels: ['S mayor', 'S menor', 'M mayor', 'M menor', 'L mayor', 'L menor', 'XL mayor', 'XL menor'], // Etiquetas para las barras
+                datasets: [{
+                    label: 'Medidas en centímetro',
+                    data: [88, 57, 92, 61, 103, 65, 105, 68], // Datos de cada barra
+                    backgroundColor: [
+                        'HotPink',
+                        'LightPink',
+                        'HotPink',
+                        'LightPink',
+                        'HotPink',
+                        'LightPink',
+                        'HotPink',
+                        'LightPink'
+                    ],
+                    borderColor: [
+                        'HotPink',
+                        'LightPink',
+                        'HotPink',
+                        'LightPink',
+                        'HotPink',
+                        'LightPink',
+                        'HotPink',
+                        'LightPink'
+                    ],
+                    borderWidth: 1 // Ancho del borde de las barras
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true // Comienza el eje Y en 0
+                    }
                 },
-                {
-                    label: 'Hombres',
-                    data: [33, 36, 37, 41, 41],
-                    backgroundColor: 'rgba(75, 0, 130, 0.5)', 
-                    borderColor: 'rgba(75, 0, 130, 
+                plugins: {
+                    legend: {
+                        labels: {
+                            font: {
+                                size: 16 // Tamaño de la fuente de la leyenda
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
 
-
+    <footer>
+        <p>Gráfico creado con Chart.js</p>
+    </footer>
+</body>
+</html>

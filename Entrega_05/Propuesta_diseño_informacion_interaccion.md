@@ -1,0 +1,1 @@
+Nosotras proponemos con nuestra página que el usuario pueda navegar y tener una expericnia desde una información presnetada de forma más general a modo de contexto hasta una infromación más concreta que consiste en la conlusión del trabajo. 
