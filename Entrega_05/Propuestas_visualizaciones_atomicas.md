@@ -9,4 +9,4 @@ grafico 2 %compra online y %compra mall
 grafico 3 principal categorías de compra online; vestuario  
 (hacer grafico y poner aqui que en base a los datos encontrados arriba, nos dimos cuenta que habia una tendencia por comprar online en la categoría de vestuario y meterle mas bla bla)  
 
-grafico augusta: analizamos y creamos un gráfico a partir de datos extraídos de un estudio sobre el análisis de tallaje de vestuario femenino en el mercado nacional del año 2021. Uno de los datos que más nos llamo la atención y que quisimos representar con el grafico es la diferencia que hay en la anchura de cintura de jeans por tallas, es decir (explicar mas en detalle el grafico y meterle el bla bla que junte todo lo de arriba; ESTE ES EL CLIMAX AQUI TODO TIENE QUE TENER SENTIDO SINO ESTAMOS HASTA EL HORTO)
+grafico augusta: analizamos y creamos un gráfico a partir de datos extraídos de un estudio sobre el análisis de tallaje de vestuario femenino en el mercado nacional del año 2021. Uno de los datos que más nos llamo la atención y que quisimos representar con el grafico es la diferencia que hay en la anchura de cintura de jeans por tallas, es decir 
