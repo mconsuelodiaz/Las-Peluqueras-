@@ -1,0 +1,134 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Gráfico interactivo para "8 de cada 10 chilenos compra online"
+    const chileansBuyOnlineCtx = document.getElementById('chileansBuyOnlineChart').getContext('2d');
+    const chileansBuyOnlineChart = new Chart(chileansBuyOnlineCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Chilenos que compran online', 'Chilenos que no compran online'],
+            datasets: [{
+                label: 'Porcentaje',
+                data: [80, 20],
+                backgroundColor: ['#FF0000', '#00FF00'], // Rojo y verde
+                borderColor: ['#FF0000', '#00FF00'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+
+    // Gráfico interactivo para "Volumen del eCommerce en Chile en 2021"
+    const ecommerceVolumeCtx = document.getElementById('ecommerceVolumeChart').getContext('2d');
+    const ecommerceVolumeChart = new Chart(ecommerceVolumeCtx, {
+        type: 'pie',
+        data: {
+            labels: ['Volumen del eCommerce en 2021'],
+            datasets: [{
+                label: 'Volumen ($16 billones)',
+                data: [16, 84], // 16% para ilustrar el volumen
+                backgroundColor: ['#FF0000', '#CCCCCC'], // Rojo y gris claro
+                borderColor: ['#FF0000', '#CCCCCC'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+
+    // Gráfico interactivo para "62% de los compradores online son personas entre 26 y 55 años"
+    const onlineBuyersCtx = document.getElementById('onlineBuyersChart').getContext('2d');
+    const onlineBuyersChart = new Chart(onlineBuyersCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['26-55 años', 'Otras edades'],
+            datasets: [{
+                label: 'Porcentaje',
+                data: [62, 38],
+                backgroundColor: ['#FF0000', '#0000FF'], // Rojo y azul
+                borderColor: ['#FF0000', '#0000FF'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+});
+
+%%javascript
+// Cargar la biblioteca Chart.js (puedes incluirla desde un CDN)
+// ... código para cargar Chart.js ...
+
+// Datos
+var datos = [80, 16, 62];
+var etiquetas = ["Compran online", "Volumen Ecommerce 2021 (billones USD)", "Compradores online entre..."];
+
+// Crear el gráfico
+var ctx = document.createElement('canvas');
+document.body.appendChild(ctx);
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: etiquetas,
+        datasets: [{
+            label: 'Estado actual del Ecommerce en Chile',
+            data: datos,
+            backgroundColor: 'blue',
+            borderColor: 'blue',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+!pip install mpld3
+import matplotlib.pyplot as plt
+import mpld3
+
+tallas = ['S mayor', 'S menor', 'M mayor', 'M menor', 'L mayor', 'L menor', 'XL mayor', 'XL menor'] #Años
+medidas = [88, 57, 92, 61, 103, 65, 105, 68]  # Porcentajes para el grupo A en cada año
+
+# Crear el gráfico de barras apiladas
+plt.figure(figsize=(14, 5))
+plt.bar(tallas, medidas)
+
+posiciones_tallas = [0.1, 1, 2, 3, 4] 
+
+# Barras para cada grupo de personas
+plt.bar('S mayor', 88, color='SteelBlue') 
+plt.bar('S menor', 57, color='LightSteelBlue')
+plt.bar('M mayor', 92, color='SteelBlue')
+plt.bar('M menor', 61, color='LightSteelBlue')
+plt.bar('L mayor', 103, color='SteelBlue')
+plt.bar('L menor', 65, color='LightSteelBlue')
+plt.bar('XL mayor', 105,  color='SteelBlue')
+plt.bar('XL menor', 68, color='LightSteelBlue')
+
+# Personalizar el gráfico
+plt.xlabel('Límites de anchura de cintura de cada talla de jeans', fontsize=22)
+plt.ylabel('Medidas en centímetro', fontsize=22) 
+plt.title('Rango de anchura de cintura de los jeans que venden las tiendas de retail en Chile', fontsize=22)
+
+# Convert the plot to HTML using mpld3
+html_str = mpld3.fig_to_html(plt.gcf())  
+
+# Save the HTML to a file
+with open('my_plot.html', 'w') as f:
+    f.write(html_str)
+

@@ -1,0 +1,56 @@
+html_content = '''<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mujeres y el Ecommers en Chile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1> Ecommerce en Chile</h1>
+        <p>Radriografía de la experiencia femenina en las compras por internet </p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#Chile y su gran avance del Ecommers">Introducción</a></li>
+            <li><a href="#Las mujeres y el Ecommers"></a></li>
+            <li><a href="#impact">Impacto</a></li>
+        </ul>
+    </nav>
+    <section id="introduction">
+        <h2>Introducción</h2>
+        <p>En los últimos años, el comercio electrónico en Chile ha experimentado un crecimiento notable. Según estadísticas recientes, el mercado de e-commerce en Chile ha crecido significativamente, con un aumento en el número de transacciones realizadas a través de plataformas en línea. Esto se debe en parte al aumento de la confianza de los consumidores chilenos en las compras en línea, la mejora en las infraestructuras digitales y el aumento de la conectividad a Internet en el país</p>
+    </section>
+    <section id="">
+        <h2>"Las mujeres y el Ecommers"</h2>
+        <p>En particular, se ha observado un incremento en la participación de las mujeres en el comercio electrónico en Chile. Esto se debe a diversos factores, como:
+        Mayor acceso a la tecnología y dispositivos en los hogares.
+        Mayor confianza en las transacciones en línea.
+        Aumento de emprendimientos liderados por mujeres en el ámbito digital.</p>
+        <canvas id="growthChart" width="400" height="200"></canvas>
+    </section>
+    <section id="impact">
+        <h2>Impacto en la Vida de las Mujeres Trabajadoras</h2>
+        <p>Uno de los aspectos más interesantes del auge del eCommerce en Chile es su impacto en las mujeres trabajadoras...</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 La Evolución del Ecommerce en Chile</p>
+    </footer>
+    <script src="chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+'''
+!pip install mpld3
+import matplotlib.pyplot as plt
+   import mpld3 
+
+   # ... (Your existing plotting code) ...
+
+   # Convert the plot to HTML
+   html_str = mpld3.fig_to_html(plt.gcf())  
+
+   # Save the HTML to a file
+   with open('my_plot.html', 'w') as f:
+       f.write(html_str)
