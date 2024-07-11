@@ -25,7 +25,6 @@
             height: 100vh;
             background: #ff69b4;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
@@ -33,9 +32,9 @@
         }
 
         .cover img {
-            width: 150px;
-            height: 150px;
-            margin-bottom: 2rem;
+            max-width: 100%;
+            height: auto;
+            max-height: 90vh;
         }
 
         header {
@@ -152,7 +151,7 @@
 </head>
 <body>
     <div class="cover">
-        <img src="docs/Logo.png" alt="Logo">
+        <img src="docs/logon.png" alt="Logo">
     </div>
 
     <header>
