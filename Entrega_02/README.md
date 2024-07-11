@@ -1,0 +1,3 @@
+# Proceso creación base de datos. 
+En nuestro proceso de investigación para nuestra historia y reportaje, visitamos varias páginas web que nos proporcionaron datos muy valiosos en los que sustentar nuestra hipótesis e hitsoria que queríamos contar, sin embargo no encontramos bases de datos hehcas como tal para hacer limpieza sino que a partir de los datos que recogimos, armamos nuestras propias bases de datos en excel.
+Al tener nuestras bases ya hehcas, procedimos a generara las visualizaciones. Algunas las hicimos directamente en vscode a través del código, y otras las hicimos con la página Flourish. 
