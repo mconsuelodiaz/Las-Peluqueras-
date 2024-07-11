@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Des-talladas en el E-commerce!: 
-        ¿Por qué no hay un auge exponencial de las compras web si estamos en la era digital?</title>
+    <title>¡Des-talladas en el E-commerce!: ¿Por qué no hay un auge exponencial de las compras web en la era digital?</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
@@ -20,6 +19,32 @@
             background-color: #111111;
             color: #FFFFFF;
             font-size: 18px;
+        }
+
+        .cover {
+            height: 100vh;
+            background: url('path/to/your/logo.png') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .cover h1 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .cover img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 2rem;
         }
 
         header {
@@ -135,6 +160,11 @@
     </style>
 </head>
 <body>
+    <div class="cover">
+        <img src="path/to/your/logo.png" alt="Logo">
+        <h1>¡Des-talladas en el E-commerce!: ¿Por qué no hay un auge exponencial de las compras web en la era digital?</h1>
+    </div>
+
     <header>
         <h1>¡Des-talladas en el E-commerce!: ¿Por qué no hay un auge exponencial de las compras web en la era digital?</h1>
     </header>
@@ -198,43 +228,4 @@
                         'rgba(255, 182, 193, 1)', 
                         'rgba(255, 105, 180, 1)', 
                         'rgba(255, 182, 193, 1)', 
-                        'rgba(255, 105, 180, 1)', 
-                        'rgba(255, 182, 193, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        ticks: {
-                            font: {
-                                size: 16
-                            }
-                        }
-                    },
-                    x: {
-                        ticks: {
-                            font: {
-                                size: 16
-                            }
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        labels: {
-                            font: {
-                                size: 18
-                            }
-                        }
-                    }
-                }
-            }
-        });
-    </script>
-</body>
-</html>
+                        'rgba(255, 105, 180
