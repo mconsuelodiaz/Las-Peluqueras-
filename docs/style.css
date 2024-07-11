@@ -13,7 +13,7 @@ body {
 .cover {
     height: 100vh;
     background: url('docs/logon.png') no-repeat center center;
-    background-size: 50%; /* Ajusta el tamaño aquí para hacerlo más grande */
+    background-size: 70%; /* Ajusta el tamaño aquí para hacerlo más grande */
     display: flex;
     justify-content: center;
     align-items: center;
