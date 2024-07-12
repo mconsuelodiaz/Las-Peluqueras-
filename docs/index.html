@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -79,6 +79,7 @@
 
         .flourish-text-section {
             display: flex;
+            justify-content: space-between;
             align-items: center;
             gap: 2rem;
             padding: 3rem 2rem;
@@ -94,7 +95,7 @@
             flex: 1;
         }
 
-        .flourish-text-section .info-cuadro {
+        .info-cuadro {
             flex: 1;
             background: transparent;
             color: #111111;
@@ -118,7 +119,7 @@
         }
 
         .grafico-container {
-            background: #111111;
+            background: black;
             padding: 20px;
             border-radius: 8px;
             width: 100%;
@@ -151,6 +152,17 @@
             margin-bottom: 2rem;
         }
 
+        .pink-box {
+            background-color: #ff69b4;
+            color: #111111;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -164,29 +176,6 @@
         @keyframes slideIn {
             from { transform: translateY(50px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
-        }
-
-        .info-cuadro {
-            background: #f8f9fa;
-            color: #111111;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            text-align: left;
-        }
-
-        .flourish-embed {
-            width: 100%;
-            height: 400px; /* Aumentar altura de los gráficos */
-        }
-
-        .grafico-info-container {
-            display: flex;
-            justify-content: space-between;
-            gap: 2rem;
-            width: 90%;
-            margin: 0 auto;
         }
     </style>
 </head>
@@ -213,93 +202,43 @@
     </div>
 
     <section id="Desafios">
-        <h2>Gráficos Comparativos</h2>
+        <h2>Gráfico Interactivo de Flourish</h2>
         <div class="grafico-info-container">
             <div class="grafico-container">
+                <h2>Comparativa de Tallas</h2>
                 <div class="flourish-embed flourish-chart" data-src="visualisation/18710584"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
             </div>
             <div class="grafico-container">
+                <h2>Comparativa de Tallas</h2>
                 <div class="flourish-embed flourish-chart" data-src="visualisation/18710584"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
             </div>
         </div>
-        <div class="info-cuadro" style="text-align: center;">
+        <div class="pink-box">
             <p>En estos gráficos se puede visualizar la comparativa de las razones que tienen las personas tanto para ir como no a una tienda física o centros comerciales a comprar.</p>
         </div>
-    </section>
-
-    <section class="grafico-info-container">
-        <h2>¿Se podría decir que el preferir probar los productos es un obstáculo para el crecimiento exponencial del ecommerce en Chile?</h2>
+        <h3 style="text-align: center;">¿Se podría decir que el preferir probar los productos es un obstáculo para el crecimiento exponencial del ecommerce en Chile?</h3>
     </section>
 
     <div class="grafico-info-container">
-        <div class="grafico-container">
-            <h2>Rango de anchura de cintura de los jeans que venden las tiendas de retail en Chile</h2>
-            <canvas id="miGraficoBarras2"></canvas>
-        </div>
         <div class="info-cuadro">
-            <p>Aunque el e-commerce en Chile ha experimentado un crecimiento notable con una mayor participación de las mujeres, la cuestión de las tallas de ropa sigue siendo un desafío que puede afectar la experiencia de compra en línea de las mujeres en el país.</p>
+            <p>En la web, la ropa es el producto más popular. Con solo unos clics, puedes encontrar una amplia variedad de estilos y tendencias sin salir de casa. La comodidad y la diversidad hacen que la compra de ropa en línea sea la preferida por muchos.</p>
+        </div>
+        <div class="grafico-container">
+            <h2>Principales categorías de compra online</h2>
+            <div class="flourish-embed flourish-chart" data-src="visualisation/18709296"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
         </div>
     </div>
+    
+    <h3 style="text-align: center;">A pesar de ser el producto más popular en la web, el crecimiento exponencial en este segmento no se mantiene.</h3>
 
-    <div class="grafico-info-container">
-        <h2>Gráfico Interactivo de Flourish</h2>
-        <div class="flourish-embed" data-src="story/2471743"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+    <h3 style="text-align: center;">¿Quiénes consumen más ropa? ¿Quiénes son los consumidores de este nicho?</h3>
+
+    <div class="grafico-container">
+        <div class="flourish-embed flourish-chart" data-src="visualisation/18709296"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
     </div>
-
-    <script>
-        // Obtener el contexto del canvas donde se dibujará el gráfico
-        var ctx = document.getElementById('miGraficoBarras2').getContext('2d');
-
-        // Crear el gráfico de barras
-        var miGraficoBarras2 = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Vestuario', 'Calzado', 'Alimentación', 'Tecnología', 'Belleza'],
-                datasets: [
-                    {
-                        label: '2020',
-                        data: [46, 32, 34, 44, 24],
-                        backgroundColor: 'rgba(255, 105, 180, 0.8)',
-                        borderColor: 'rgba(255, 105, 180, 1)',
-                        borderWidth: 1
-                    },
-                    {
-                        label: '2021',
-                        data: [47, 28, 32, 36, 24],
-                        backgroundColor: 'rgba(255, 182, 193, 0.8)',
-                        borderColor: 'rgba(255, 182, 193, 1)',
-                        borderWidth: 1
-                    },
-                    {
-                        label: '2022',
-                        data: [43, 27, 25, 27, 19],
-                        backgroundColor: 'rgba(255, 105, 180, 0.8)',
-                        borderColor: 'rgba(255, 105, 180, 1)',
-                        borderWidth: 1
-                    },
-                    {
-                        label: '2023',
-                        data: [45, 31, 23, 22, 19],
-                        backgroundColor: 'rgba(255, 182, 193, 0.8)',
-                        borderColor: 'rgba(255, 182, 193, 1)',
-                        borderWidth: 1
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-    </script>
 
     <footer>
-        <p>&copy; 2024 Estamos DES-TALLADAS. Todos los derechos reservados.</p>
+        <p>Este es un proyecto sobre el ecommerce en Chile.</p>
     </footer>
 </body>
 </html>
-
