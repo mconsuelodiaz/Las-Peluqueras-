@@ -210,6 +210,8 @@
         <p>No es tu culpa...</p>
     </section>
 
+
+
     <header>
         <h1>Estamos DES-TALLADAS en el Ecommerce</h1>
         <p class="subtitle">La incomodidad que genera la disparidad del tallaje tiene más peso que los beneficios que trae el Ecommerce al momento de comprar.</p>
@@ -220,6 +222,23 @@
         <div class="info-cuadro">
             <p>Durante la pandemia los chilenos se vieron obligados a permanecer encerrados en sus hogares por la emergencia sanitaria. Debido a este confinamiento se aceleró la adopción de nuevos comportamientos en la sociedad, como las compras en línea. En ese período de tiempo hubo un alza en el ecommerce y los chilenos descubrieron los beneficios que este brinda. Sin embargo, esta alza no se mantuvo a pesar de su tendencia creciente siendo los centros comerciales físicos la opción preferida para comprar.</p>
         </div>
+ 
+    <div class="grafico-info-container">
+        <h2>Gráfico Interactivo de Flourish</h2>
+        <div class="flourish-embed" data-src="story/2471743"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+    </div>
+
+    <div class="grafico-info-container flourish-charts">
+        <div class="flourish-embed flourish-chart" data-src="visualisation/18710584"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+        <div class="flourish-embed flourish-chart" data-src="visualisation/18710584"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+    </div>
+
+    <div class="comparison-text">
+        En estos gráficos se puede visualizar la comparativa de las razones que tienen las personas tanto para ir como no a una tienda física o centros comerciales a comprar.
+    </div>
+
+    <div class="obstacle-text">
+        ¿Se podría decir que el preferir probar los productos es un obstáculo para el crecimiento exponencial del ecommerce en Chile?
     </div>
 
     <section id="Desafios">
@@ -244,26 +263,9 @@
         </div>
     </div>
 
-    <div class="grafico-info-container">
-        <h2>Gráfico Interactivo de Flourish</h2>
-        <div class="flourish-embed" data-src="story/2471743"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-    </div>
-
-    <div class="grafico-info-container flourish-charts">
-        <div class="flourish-embed flourish-chart" data-src="visualisation/18710584"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-        <div class="flourish-embed flourish-chart" data-src="visualisation/18710584"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-    </div>
-
-    <div class="comparison-text">
-        En estos gráficos se puede visualizar la comparativa de las razones que tienen las personas tanto para ir como no a una tienda física o centros comerciales a comprar.
-    </div>
-
-    <div class="obstacle-text">
-        ¿Se podría decir que el preferir probar los productos es un obstáculo para el crecimiento exponencial del ecommerce en Chile?
-    </div>
 
     <footer>
-        <p>Este proyecto está dedicado a comprender el impacto del tallaje en la experiencia de compra online en Chile.</p>
+        <p>&copy; 2024 E-commerce en Chile</p>
     </footer>
 
     <script>
@@ -273,33 +275,40 @@
         const miGraficoBarras = new Chart(ctxBarras, {
             type: 'bar',
             data: {
-                labels: ['Categoría 1', 'Categoría 2', 'Categoría 3'],
-                datasets: [{
-                    label: 'Ventas',
-                    data: [12, 19, 3],
-                    backgroundColor: '#FF69B4',
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
+                labels: ['Vestuario', 'Calzado', 'Alimentación', 'Tecnología', 'Belleza'],
+                datasets: [
+                    {
+                        label: '2020',
+                        data: [46, 32, 34, 44, 24],
+                        backgroundColor: 'rgba(255, 105, 180, 0.8)',
+                        borderColor: 'rgba(255, 105, 180, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: '2021',
+                        data: [47, 28, 32, 36, 24],
+                        backgroundColor: 'rgba(255, 182, 193, 0.8)',
+                        borderColor: 'rgba(255, 182, 193, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: '2022',
+                        data: [43, 27, 25, 27, 19],
+                        backgroundColor: 'rgba(255, 105, 180, 0.8)',
+                        borderColor: 'rgba(255, 105, 180, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: '2023',
+                        data: [45, 31, 23, 22, 19],
+                        backgroundColor: 'rgba(255, 182, 193, 0.8)',
+                        borderColor: 'rgba(255, 182, 193, 1)',
+                        borderWidth: 1
                     }
-                }
-            }
-        });
-
-        const miGraficoBarras2 = new Chart(ctxBarras2, {
-            type: 'bar',
-            data: {
-                labels: ['Tienda 1', 'Tienda 2', 'Tienda 3'],
-                datasets: [{
-                    label: 'Ventas',
-                    data: [5, 15, 8],
-                    backgroundColor: '#FF69B4',
-                }]
+                ]
             },
             options: {
+                responsive: true,
                 scales: {
                     y: {
                         beginAtZero: true
@@ -308,6 +317,9 @@
             }
         });
     </script>
+
+    <footer>
+        <p>&copy; 2024 E-commerce en Chile</p>
+    </footer>
 </body>
 </html>
-
