@@ -91,5 +91,14 @@ h2 {
     max-width: 400px;
     text-align: left;
 }
+.flourish-embed {
+    background: black !important; /* Cambiar el fondo del gráfico */
+    color: white !important; /* Cambiar el color del texto a blanco */
+}
+
+.info-cuadro {
+    background: transparent !important; /* Eliminar el fondo del cuadro de información */
+    color: white !important; /* Asegurarse de que el texto sea blanco */
+}
 
 

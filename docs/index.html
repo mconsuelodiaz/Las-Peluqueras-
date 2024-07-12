@@ -82,8 +82,8 @@
             align-items: center;
             gap: 2rem;
             padding: 3rem 2rem;
-            background: #FFFFFF;
-            color: #111111;
+            background: #000000;
+            color: #FFFFFF;
             margin: 2rem;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -97,7 +97,7 @@
         .flourish-text-section .info-cuadro {
             flex: 1;
             background: transparent;
-            color: #111111;
+            color: #FFFFFF;
             padding: 1rem;
             border-radius: 8px;
             max-width: 400px;
@@ -193,7 +193,9 @@
     </header>
     
     <div class="flourish-text-section">
-        <div class="flourish-embed flourish-chart" data-src="visualisation/18709061"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+        <div class="flourish-embed flourish-chart" data-src="visualisation/18709061">
+            <script src="https://public.flourish.studio/resources/embed.js"></script>
+        </div>
         <div class="info-cuadro">
             <p>Durante la pandemia los chilenos se vieron obligados a permanecer encerrados en sus hogares por la emergencia sanitaria. Debido a este confinamiento se aceleró la adopción de nuevos comportamientos en la sociedad, como las compras en línea. En ese período de tiempo hubo un alza en el ecommerce y los chilenos descubrieron los beneficios que este brinda. Sin embargo, esta alza no se mantuvo a pesar de su tendencia creciente siendo los centros comerciales físicos la opción preferida para comprar.</p>
         </div>
@@ -223,7 +225,12 @@
 
     <div class="grafico-info-container">
         <h2>Gráfico Interactivo de Flourish</h2>
-        <div class="flourish-embed" data-src="story/2471743"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+        <div class="flourish-embed" data-src="story/2471743">
+            <script src="https://public.flourish.studio/resources/embed.js"></script>
+        </div>
+        <div class="info-cuadro">
+            <p>En estos gráficos se puede visualizar la comparativa de las razones que tienen las personas tanto para ir como no a una tienda física a comprar.</p>
+        </div>
     </div>
 
     <script>
@@ -270,7 +277,22 @@
                 responsive: true,
                 scales: {
                     y: {
-                        beginAtZero: true
+                        beginAtZero: true,
+                        grid: {
+                            color: '#444444'
+                        }
+                    },
+                    x: {
+                        grid: {
+                            color: '#444444'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#FFFFFF'
+                        }
                     }
                 }
             }
@@ -282,4 +304,3 @@
     </footer>
 </body>
 </html>
-
