@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=North+Plains&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
+        /* Estilos generales */
         body {
             font-family: 'North Plains', sans-serif;
             line-height: 1.6;
@@ -18,10 +19,11 @@
             font-size: 18px;
         }
 
+        /* Estilos para la portada */
         .cover {
             height: 100vh;
             background: url('docs/logon.png') no-repeat center center;
-            background-size: contain;
+            background-size: 98%; /* Ajusta el tamaño aquí para hacerlo más grande */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -29,6 +31,7 @@
             color: #FFFFFF;
         }
 
+        /* Resto de los estilos */
         header {
             background: #ff69b4;
             color: #FFFFFF;
@@ -41,34 +44,6 @@
             margin: 0;
             font-size: 2.5rem;
             margin-bottom: 1rem;
-        }
-
-        nav {
-            background: #ff69b4;
-            color: #FFFFFF;
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 1rem;
-        }
-
-        nav ul li a {
-            color: #FFFFFF;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
         }
 
         section {
@@ -143,83 +118,66 @@
 </head>
 <body>
     <div class="cover"></div>
-<img src="Logon.png" "alt="Des-talladas"
-
+    
     <header>
-        <h1>¡Des-talladas en el E-commerce!:
-            ¿Por qué no vemos un auge exponencial de las compras web en la era digital? </h1>
+        <h1>¡Des-talladas en el E-commerce!: ¿Por qué no vemos un auge exponencial de las compras web en la era digital?</h1>
     </header>
     
     <section id="Desafios">
-        <h2>Desafíos del e-commerce</h2>
-        <p>En la era del comercio electrónico en constante crecimiento, las mujeres chilenas han emergido como una fuerza poderosa en el mundo del e-commerce. Con una presencia cada vez más prominente en plataformas en línea, las cifras muestran un aumento significativo en la participación femenina en el comercio digital en Chile.</p>
-        <p>Según datos recientes, el número de mujeres que realizan compras en línea en Chile ha experimentado un notable aumento del xx% en los últimos dos años, representando ahora el xx% de todos los consumidores en línea en el país. Este incremento ha sido impulsado en parte por la pandemia, que aceleró la adopción de compras en línea por motivos de seguridad y conveniencia.</p>
+        <h2>Principales categorías de compra online a través de los años</h2>
+        <div class="grafico-info-container">
+            <div class="grafico-container">
+                <canvas id="miGraficoBarras"></canvas>
+            </div>
+            <div class="info-cuadro">
+                <p>Aunque el e-commerce en Chile ha experimentado un crecimiento notable con una mayor participación de las mujeres, la cuestión de las tallas de ropa sigue siendo un desafío que puede afectar la experiencia de compra en línea de las mujeres en el país.</p>
+            </div>
+        </div>
     </section>
-
-    <div class="grafico-info-container" id="Grafico">
-        <div class="grafico-container">
-            <h2>Rango de anchura de cintura de los jeans que venden las tiendas de retail en Chile</h2>
-            <canvas id="miGraficoBarras"></canvas>
-        </div>
-        <div class="info-cuadro">
-            <p>Aunque el e-commerce en Chile ha experimentado un crecimiento notable con una mayor participación de las mujeres, la cuestión de las tallas de ropa sigue siendo un desafío que puede afectar la experiencia de compra en línea de las mujeres en el país.</p>
-        </div>
-    </div>
-
-    <div class="grafico-info-container">
-        <h2>Gráfico Interactivo de Flourish</h2>
-        <div class="flourish-embed" data-src="story/2471745">
-            <script src="https://public.flourish.studio/resources/embed.js"></script>
-        </div>
-    </div>
 
     <footer>
         <p>&copy; 2024 E-commerce en Chile</p>
     </footer>
 
     <script>
-        // Obtener el contexto del canvas donde se dibujará el gráfico
-        var ctx = document.getElementById('miGraficoBarras').getContext('2d');
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtener el contexto del canvas donde se dibujará el gráfico
+            var ctx = document.getElementById('miGraficoBarras').getContext('2d');
 
-        // Crear el gráfico de barras
-        var miGraficoBarras = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['S mayor', 'S menor', 'M mayor', 'M menor', 'L mayor', 'L menor', 'XL mayor', 'XL menor'],
-                datasets: [{
-                    label: 'Medidas en centímetro',
-                    data: [88, 57, 92, 61, 103, 65, 105, 68],
-                    backgroundColor: [
-                        'rgba(255, 105, 180, 0.8)',
-                        'rgba(255, 182, 193, 0.8)',
-                        'rgba(255, 105, 180, 0.8)', 
-                        'rgba(255, 182, 193, 0.8)', 
-                        'rgba(255, 105, 180, 0.8)', 
-                        'rgba(255, 182, 193, 0.8)', 
-                        'rgba(255, 105, 180, 0.8)', 
-                        'rgba(255, 182, 193, 0.8)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 105, 180, 1)', 
-                        'rgba(255, 182, 193, 1)', 
-                        'rgba(255, 105, 180, 1)', 
-                        'rgba(255, 182, 193, 1)', 
-                        'rgba(255, 105, 180, 1)', 
-                        'rgba(255, 182, 193, 1)', 
-                        'rgba(255, 105, 180, 1)', 
-                        'rgba(255, 182, 193, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: true
+            // Crear el gráfico de barras
+            var miGraficoBarras = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Vestuario', 'Calzado', 'Alimentación', 'Tecnología', 'Belleza'],
+                    datasets: [{
+                        label: 'Porcentaje',
+                        data: [46, 32, 34, 44, 24],
+                        backgroundColor: [
+                            'rgba(255, 105, 180, 0.8)',
+                            'rgba(255, 182, 193, 0.8)',
+                            'rgba(255, 105, 180, 0.8)', 
+                            'rgba(255, 182, 193, 0.8)', 
+                            'rgba(255, 105, 180, 0.8)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 105, 180, 1)', 
+                            'rgba(255, 182, 193, 1)', 
+                            'rgba(255, 105, 180, 1)', 
+                            'rgba(255, 182, 193, 1)', 
+                            'rgba(255, 105, 180, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
                     }
                 }
-            }
+            });
         });
     </script>
 </body>
