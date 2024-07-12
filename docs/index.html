@@ -118,7 +118,7 @@
 </head>
 <body>
     <div class="cover"></div>
-    
+    <img src="Logon.png" "alt="De-stalladas""
     <header>
         <h1>¡Des-talladas en el E-commerce!: ¿Por qué no vemos un auge exponencial de las compras web en la era digital?</h1>
     </header>
@@ -140,44 +140,53 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Obtener el contexto del canvas donde se dibujará el gráfico
-            var ctx = document.getElementById('miGraficoBarras').getContext('2d');
+        // Obtener el contexto del canvas donde se dibujará el gráfico
+        var ctx = document.getElementById('miGraficoBarras').getContext('2d');
 
-            // Crear el gráfico de barras
-            var miGraficoBarras = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Vestuario', 'Calzado', 'Alimentación', 'Tecnología', 'Belleza'],
-                    datasets: [{
-                        label: 'Porcentaje',
+        // Crear el gráfico de barras
+        var miGraficoBarras = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Vestuario', 'Calzado', 'Alimentación', 'Tecnología', 'Belleza'],
+                datasets: [
+                    {
+                        label: '2020',
                         data: [46, 32, 34, 44, 24],
-                        backgroundColor: [
-                            'rgba(255, 105, 180, 0.8)',
-                            'rgba(255, 182, 193, 0.8)',
-                            'rgba(255, 105, 180, 0.8)', 
-                            'rgba(255, 182, 193, 0.8)', 
-                            'rgba(255, 105, 180, 0.8)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 105, 180, 1)', 
-                            'rgba(255, 182, 193, 1)', 
-                            'rgba(255, 105, 180, 1)', 
-                            'rgba(255, 182, 193, 1)', 
-                            'rgba(255, 105, 180, 1)'
-                        ],
+                        backgroundColor: 'rgba(255, 105, 180, 0.8)',
+                        borderColor: 'rgba(255, 105, 180, 1)',
                         borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
+                    },
+                    {
+                        label: '2021',
+                        data: [47, 28, 32, 36, 24],
+                        backgroundColor: 'rgba(255, 182, 193, 0.8)',
+                        borderColor: 'rgba(255, 182, 193, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: '2022',
+                        data: [43, 27, 25, 27, 19],
+                        backgroundColor: 'rgba(255, 105, 180, 0.8)',
+                        borderColor: 'rgba(255, 105, 180, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: '2023',
+                        data: [45, 31, 23, 22, 19],
+                        backgroundColor: 'rgba(255, 182, 193, 0.8)',
+                        borderColor: 'rgba(255, 182, 193, 1)',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
                     }
                 }
-            });
+            }
         });
     </script>
 </body>
