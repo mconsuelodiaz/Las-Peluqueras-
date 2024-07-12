@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estamos DES-TALLADAS en el Ecommerce</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Vogue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
@@ -43,7 +43,7 @@
             font-size: 4rem;
             margin-bottom: 1rem;
             color: #ff69b4;
-            font-family: 'Vogue', serif;
+            font-family: 'Roboto', sans-serif;
         }
 
         .subtitle {
@@ -51,12 +51,13 @@
             font-size: 1.5rem;
             font-weight: normal;
             color: #ff69b4;
+            font-family: 'Roboto', sans-serif;
         }
 
         .hook-section {
             text-align: center;
             padding: 3rem 2rem;
-            margin: 2rem 2rem 6rem; /* Añadir margen inferior para espacio estético */
+            margin: 2rem 2rem 6rem;
             animation: zoomIn 1.5s;
             background: transparent;
         }
@@ -76,33 +77,6 @@
             color: #FFFFFF;
         }
 
-        .indice-section {
-            padding: 3rem 2rem;
-            background: #FFFFFF;
-            color: #111111;
-            margin: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            animation: zoomIn 1.5s;
-        }
-
-        .indice-section h2 {
-            margin-top: 0;
-            margin-bottom: 1rem;
-            font-size: 2rem;
-            color: #111111;
-        }
-
-        .indice-section ul {
-            list-style: none;
-            padding: 0;
-            font-size: 1.25rem;
-        }
-
-        .indice-section ul li {
-            margin-bottom: 1rem;
-        }
-
         .flourish-text-section {
             display: flex;
             align-items: center;
@@ -113,7 +87,7 @@
             margin: 2rem;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            animation: zoomIn 1.5s;
+            animation: slideIn 1.5s;
         }
 
         .flourish-text-section .flourish-embed {
@@ -140,18 +114,26 @@
             margin: 0 auto;
             text-align: center;
             margin-bottom: 2rem;
+            animation: slideIn 1.5s;
         }
 
-        .grafico-container,
-        .flourish-embed {
+        .grafico-container {
+            background: black;
+            padding: 20px;
+            border-radius: 8px;
             width: 100%;
             max-width: 800px;
-            height: 400px;
         }
 
-        #miGraficoBarras {
+        .grafico-container canvas {
             width: 100%;
             height: 100%;
+        }
+
+        .grafico-container h2 {
+            color: #FFFFFF;
+            font-weight: bold;
+            margin: 0 0 1rem;
         }
 
         footer {
@@ -177,6 +159,11 @@
         @keyframes zoomIn {
             from { transform: scale(0.5); }
             to { transform: scale(1); }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
 
         .info-cuadro {
@@ -205,18 +192,6 @@
         <p class="subtitle">La incomodidad que genera la disparidad del tallaje tiene más peso que los beneficios que trae el Ecommerce al momento de comprar.</p>
     </header>
     
-    <section class="indice-section">
-        <h2>Índices</h2>
-        <ul>
-            <li>Ecommerce v/s Centro Comercial</li>
-            <li>Moda en Ecommerce</li>
-            <li>Compradoras online</li>
-            <li>Conflictos al comprar ropa de mujer online</li>
-            <li>Tallaje ropa femenina</li>
-            <li>Tiendas de retail (posibles soluciones)</li>
-        </ul>
-    </section>
-
     <div class="flourish-text-section">
         <div class="flourish-embed flourish-chart" data-src="visualisation/18709061"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
         <div class="info-cuadro">
@@ -307,3 +282,4 @@
     </footer>
 </body>
 </html>
+
