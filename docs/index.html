@@ -19,19 +19,17 @@
         }
 
         .cover {
-            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 100vh;
-            overflow: hidden;
+            background-color: #111111; /* Fondo negro para la portada */
         }
 
-        .cover video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 70%; /* Reducido al 70% del ancho */
+        .cover img {
+            width: 50%; /* Ajusta el tamaño de la imagen aquí */
             height: auto;
-            transform: translate(-50%, -50%);
-            z-index: -1;
+            max-width: 400px;
         }
 
         header {
@@ -120,7 +118,7 @@
 </head>
 <body>
     <div class="cover">
-        <video src="logo3.mp4" autoplay loop muted></video>
+        <img src="finalogo.png" alt="Logo">
     </div>
     
     <header>
