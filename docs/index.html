@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estamos DES-TALLADAS en el Ecommerce</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=North+Plains&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vogue&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
@@ -40,9 +40,10 @@
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 4rem;
             margin-bottom: 1rem;
             color: #ff69b4;
+            font-family: 'Vogue', serif;
         }
 
         .subtitle {
@@ -55,7 +56,7 @@
         .hook-section {
             text-align: center;
             padding: 3rem 2rem;
-            margin: 2rem 2rem 4rem; /* Añadir margen inferior para espacio estético */
+            margin: 2rem 2rem 6rem; /* Añadir margen inferior para espacio estético */
             animation: zoomIn 1.5s;
             background: transparent;
         }
@@ -75,7 +76,7 @@
             color: #FFFFFF;
         }
 
-        section {
+        .indice-section {
             padding: 3rem 2rem;
             background: #FFFFFF;
             color: #111111;
@@ -83,6 +84,74 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             animation: zoomIn 1.5s;
+        }
+
+        .indice-section h2 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            color: #111111;
+        }
+
+        .indice-section ul {
+            list-style: none;
+            padding: 0;
+            font-size: 1.25rem;
+        }
+
+        .indice-section ul li {
+            margin-bottom: 1rem;
+        }
+
+        .flourish-text-section {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            padding: 3rem 2rem;
+            background: #FFFFFF;
+            color: #111111;
+            margin: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: zoomIn 1.5s;
+        }
+
+        .flourish-text-section .flourish-embed {
+            flex: 1;
+        }
+
+        .flourish-text-section .info-cuadro {
+            flex: 1;
+            background: transparent;
+            color: #111111;
+            padding: 1rem;
+            border-radius: 8px;
+            max-width: 400px;
+            text-align: left;
+        }
+
+        .grafico-info-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .grafico-container,
+        .flourish-embed {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+        }
+
+        #miGraficoBarras {
+            width: 100%;
+            height: 100%;
         }
 
         footer {
@@ -110,30 +179,6 @@
             to { transform: scale(1); }
         }
 
-        .grafico-info-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            width: 90%;
-            margin: 0 auto;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .grafico-container,
-        .flourish-embed {
-            width: 100%;
-            max-width: 800px;
-            height: 400px;
-        }
-
-        #miGraficoBarras {
-            width: 100%;
-            height: 100%;
-        }
-
         .info-cuadro {
             background: #f8f9fa;
             color: #111111;
@@ -149,7 +194,7 @@
     <div class="cover">
         <img src="finalogo.png" alt="Logo">
     </div>
-    
+
     <section class="hook-section">
         <h2>¿Te pasa que te compras ropa de tu talla, pero al probarla no te queda bien?</h2>
         <p>No es tu culpa...</p>
@@ -160,6 +205,25 @@
         <p class="subtitle">La incomodidad que genera la disparidad del tallaje tiene más peso que los beneficios que trae el Ecommerce al momento de comprar.</p>
     </header>
     
+    <section class="indice-section">
+        <h2>Índices</h2>
+        <ul>
+            <li>Ecommerce v/s Centro Comercial</li>
+            <li>Moda en Ecommerce</li>
+            <li>Compradoras online</li>
+            <li>Conflictos al comprar ropa de mujer online</li>
+            <li>Tallaje ropa femenina</li>
+            <li>Tiendas de retail (posibles soluciones)</li>
+        </ul>
+    </section>
+
+    <div class="flourish-text-section">
+        <div class="flourish-embed flourish-chart" data-src="visualisation/18709061"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+        <div class="info-cuadro">
+            <p>Durante la pandemia los chilenos se vieron obligados a permanecer encerrados en sus hogares por la emergencia sanitaria. Debido a este confinamiento se aceleró la adopción de nuevos comportamientos en la sociedad, como las compras en línea. En ese período de tiempo hubo un alza en el ecommerce y los chilenos descubrieron los beneficios que este brinda. Sin embargo, esta alza no se mantuvo a pesar de su tendencia creciente siendo los centros comerciales físicos la opción preferida para comprar.</p>
+        </div>
+    </div>
+
     <section id="Desafios">
         <h2>Principales categorías de compra online a través de los años</h2>
         <div class="grafico-info-container">
@@ -186,8 +250,6 @@
         <h2>Gráfico Interactivo de Flourish</h2>
         <div class="flourish-embed" data-src="story/2471743"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
     </div>
-
-    <div class="flourish-embed flourish-chart" data-src="visualisation/18708768"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
     <script>
         // Obtener el contexto del canvas donde se dibujará el gráfico
