@@ -3,218 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estamos DES-TALLADAS en el Ecommerce</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>E-commerce en Chile</title>
     <style>
         body {
-            font-family: 'North Plains', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #111111;
-            color: #FFFFFF;
-            font-size: 18px;
-        }
-
-        .cover {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #111111;
-        }
-
-        .cover img {
-            width: 50%;
-            height: auto;
-            max-width: 400px;
-        }
-
-        header {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
             text-align: center;
-            padding: 2rem 0;
-            animation: fadeIn 2s;
         }
-
-        header h1 {
-            margin: 0;
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            color: #ff69b4;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .subtitle {
-            margin: 0;
-            font-size: 1.5rem;
-            font-weight: normal;
-            color: #ff69b4;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .hook-section {
-            text-align: center;
-            padding: 3rem 2rem;
-            margin: 2rem 2rem 6rem;
-            animation: fadeIn 1.5s;
-            background: transparent;
-        }
-
-        .hook-section h2 {
-            margin: 0;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #FFFFFF;
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        .hook-section p {
-            margin: 0;
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: #FFFFFF;
-        }
-
-        .flourish-text-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2rem;
-            padding: 3rem 2rem;
-            background: #FFFFFF;
-            color: #111111;
-            margin: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            animation: slideIn 1.5s;
-        }
-
-        .flourish-text-section .flourish-embed {
-            flex: 1;
-        }
-
-        .info-cuadro {
-            flex: 1;
-            background: transparent;
-            color: #111111;
-            padding: 1rem;
-            border-radius: 8px;
-            max-width: 400px;
-            text-align: left;
-        }
-
-        .grafico-info-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            width: 90%;
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
-            text-align: center;
-            margin-bottom: 2rem;
-            animation: slideIn 1.5s;
+            padding: 20px;
         }
-
-        .grafico-container {
+        .chart {
             display: flex;
             justify-content: space-between;
-            gap: 20px;
-            width: 100%;
-            margin-bottom: 2rem;
+            margin: 20px 0;
         }
-
-        .grafico-container .flourish-embed {
-            flex: 1;
-            background: black;
-            border-radius: 8px;
+        .chart div {
+            width: 48%;
+            height: 400px;
+        }
+        .highlight {
+            background-color: #FF69B4; /* Color rosado */
+            color: #fff;
             padding: 10px;
-        }
-
-        .grafico-container h2 {
-            color: #FFFFFF;
-            font-weight: bold;
-            margin: 0 0 1rem;
-        }
-
-        .pink-box {
-            background-color: #ff69b4;
-            color: #111111;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
+            border-radius: 5px;
             text-align: left;
-            margin-bottom: 2rem;
-            align-self: flex-start;
+            font-weight: bold;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideIn {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+        .subtitle {
+            margin: 20px 0;
+            font-size: 1.5em;
         }
     </style>
 </head>
 <body>
-    <div class="cover">
-        <img src="finalogo.png" alt="Logo">
-    </div>
+<div class="container">
+    <h1>Razones que tienen las personas tanto para ir como no a una tienda</h1>
 
-    <section class="hook-section">
-        <h2>¿Te pasa que te compras ropa de tu talla, pero al probarla no te queda bien?</h2>
-        <p>No es tu culpa...</p>
-    </section>
-
-    <header>
-        <h1>Estamos DES-TALLADAS en el Ecommerce</h1>
-        <p class="subtitle">La incomodidad que genera la disparidad del tallaje tiene más peso que los beneficios que trae el Ecommerce al momento de comprar.</p>
-    </header>
-    
-    <div class="flourish-text-section">
-        <div class="flourish-embed flourish-chart" data-src="visualisation/18709061"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-        <div class="info-cuadro">
-            <p>Durante la pandemia los chilenos se vieron obligados a permanecer encerrados en sus hogares por la emergencia sanitaria. Debido a este confinamiento se aceleró la adopción de nuevos comportamientos en la sociedad, como las compras en línea. En ese período de tiempo hubo un alza en el ecommerce y los chilenos descubrieron los beneficios que este brinda. Sin embargo, esta alza no se mantuvo a pesar de su tendencia creciente siendo los centros comerciales físicos la opción preferida para comprar.</p>
+    <div class="chart">
+        <div class="flourish-embed flourish-chart" data-src="visualisation/18709061">
+            <script src="https://public.flourish.studio/resources/embed.js"></script>
+        </div>
+        <div class="flourish-embed flourish-chart" data-src="visualisation/18710584">
+            <script src="https://public.flourish.studio/resources/embed.js"></script>
         </div>
     </div>
 
-    <section id="Desafios">
-        <h2>Gráfico Interactivo de Flourish</h2>
-        <div class="grafico-container">
-            <div class="flourish-embed flourish-chart" data-src="visualisation/18710584"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-            <div class="flourish-embed flourish-chart" data-src="visualisation/18710584"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-        </div>
-        <div class="pink-box">
-            <p>En estos gráficos se puede visualizar la comparativa de las razones que tienen las personas tanto para ir como no a una tienda física o centros comerciales a comprar.</p>
-        </div>
-        <h3 style="text-align: center;">¿Se podría decir que el preferir probar los productos es un obstáculo para el crecimiento exponencial del ecommerce en Chile?</h3>
-    </section>
+    <h2 class="subtitle">¿Se podría decir que el preferir probar los productos es un obstáculo para el crecimiento exponencial del ecommerce en Chile?</h2>
 
-    <div class="grafico-info-container">
-        <div class="info-cuadro">
-            <p>En la web, la ropa es el producto más popular. Con solo unos clics, puedes encontrar una amplia variedad de estilos y tendencias sin salir de casa. La comodidad y la diversidad hacen que la compra de ropa en línea sea la preferida por muchos.</p>
-        </div>
-        <div class="grafico-container">
-            <h2>Principales categorías de compra online</h2>
-            <div class="flourish-embed flourish-chart" data-src="visualisation/18709296"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-        </div>
-    </div>
-    
-    <h3 style="text-align: center;">A pesar de ser el producto más popular en la web, el crecimiento exponencial en este segmento no se mantiene.</h3>
-
-    <h3 style="text-align: center;">¿Quiénes consumen más ropa? ¿Quiénes son los consumidores de este nicho?</h3>
-
-    <div class="grafico-container">
-        <div class="flourish-embed flourish-chart" data-src="visualisation/18709296"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+    <div class="highlight">
+        En la web, la ropa es el producto más popular. Con solo unos clics, puedes encontrar una amplia variedad de estilos y tendencias sin salir de casa. La comodidad y la diversidad hacen que la compra de ropa en línea sea la preferida por muchos.
     </div>
 
-    <footer>
-        <p>Este es un proyecto sobre el ecommerce en Chile.</p>
-    </footer>
+    <h3>Principales categorías de la compra online</h3>
+    <div class="flourish-embed flourish-chart" data-src="visualisation/18709296">
+        <script src="https://public.flourish.studio/resources/embed.js"></script>
+    </div>
+
+    <h4 class="subtitle">A pesar de ser el producto más popular en la web, el crecimiento exponencial en este segmento no se mantiene.</h4>
+
+    <!-- Aquí irán los demás elementos que faltan en la página -->
+
+</div>
 </body>
 </html>
