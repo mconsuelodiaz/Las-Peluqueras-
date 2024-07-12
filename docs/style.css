@@ -12,7 +12,7 @@ body {
 /* Estilos para la portada */
 .cover {
     height: 100vh;
-    background: url('docs/Logon.png') no-repeat center center;
+    background: url('docs/logon.png') no-repeat center center;
     background-size: 100%; /* Ajusta el tamaño aquí para hacerlo más grande */
     display: flex;
     justify-content: center;
