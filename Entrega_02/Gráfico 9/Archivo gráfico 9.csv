@@ -1,0 +1,19 @@
+TALLAJE DE ROPA FEMENINA;;;;;
+;;;;;
+Medidas jeans;Indicador;S;M;L;XL
+Largo ;Mínimo (cm);73;73;74;74
+ ;Máxima (cm);102,2;103,2;106,8;107,2
+ ;Promedio;93,1;93,5;93,5;97,7
+;;;;;
+Medidas Vestidos;Indicador;S;M;L;XL
+Largo;Mínimo (cm);83,7;83; ;79
+ ;Máxima (cm);124;125; ;127
+ ;Promedio;97,8;100,7; ;98,5
+;;;;;
+Medidas Poleras;Indicador;S;M;L;XL
+Largo;Mínimo (cm);55,3;50; ;59,4
+ ;Máxima (cm);97;103; ;115
+ ;Promedio;66,7;69,5; ;75,6
+Largo Mangas;Mínimo (cm);37,3;38; ;39,8
+ ;Máxima (cm);80,3;82,3; ;83,5
+ ;Promedio;57,6;61,1; ;62,1
