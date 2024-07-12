@@ -8,19 +8,6 @@ body {
     color: #FFFFFF;
     font-size: 18px;
 }
-
-/* Estilos para la portada */
-.cover {
-    height: 100vh;
-    background: url('docs/logon.png') no-repeat center center;
-    background-size: 100%; /* Ajusta el tamaño aquí para hacerlo más grande */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #FFFFFF;
-}
-
 /* Resto de los estilos */
 header {
     background: #ff69b4;

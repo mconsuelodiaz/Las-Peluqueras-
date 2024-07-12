@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=North+Plains&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        /* Estilos generales */
         body {
             font-family: 'North Plains', sans-serif;
             line-height: 1.6;
@@ -19,21 +18,24 @@
             font-size: 18px;
         }
 
-        /* Estilos para la portada */
         .cover {
+            position: relative;
             height: 100vh;
-            background: url('docs/logon.png') no-repeat center center;
-            background-size: 98%; /* Ajusta el tamaño aquí para hacerlo más grande */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #FFFFFF;
+            overflow: hidden;
         }
 
-        /* Resto de los estilos */
+        .cover video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
         header {
-            background: #ff69b4;
+            background: rgba(255, 105, 180, 0.7);
             color: #FFFFFF;
             padding: 2rem 0;
             text-align: center;
@@ -50,7 +52,7 @@
             padding: 3rem 2rem;
             background: #FFFFFF;
             color: #111111;
-            margin: 2rem 2rem;
+            margin: 2rem;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             animation: zoomIn 1.5s;
@@ -117,7 +119,9 @@
     </style>
 </head>
 <body>
-    <div class="cover"></div>
+    <div class="cover">
+        <video src="logodestalladas.mp4" autoplay loop muted></video>
+    </div>
     
     <header>
         <h1>¡Des-talladas en el E-commerce!: ¿Por qué no vemos un auge exponencial de las compras web en la era digital?</h1>
@@ -150,9 +154,6 @@
         <div class="flourish-embed" data-src="story/2471743"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
     </div>
 
-  
-
-    <!-- Segundo gráfico de Flourish -->
     <div class="flourish-embed flourish-chart" data-src="visualisation/18708768"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
     <script>
@@ -211,5 +212,6 @@
     </footer>
 </body>
 </html>
+
 
    
