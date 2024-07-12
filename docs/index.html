@@ -6,6 +6,8 @@
     <title>Estamos DES-TALLADAS en el Ecommerce</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=North+Plains&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
             font-family: 'North Plains', sans-serif;
@@ -109,11 +111,11 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 2rem;
+            gap: 4rem; /* Aumenta la separación entre gráficos */
             width: 90%;
             margin: 0 auto;
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 4rem; /* Aumenta la separación inferior */
             animation: slideIn 1.5s;
         }
 
@@ -159,6 +161,13 @@
             margin: 2rem 0;
         }
 
+        .highlight-text {
+            font-size: 1.5rem;
+            color: #ff69b4;
+            margin: 4rem 0 2rem;
+            font-weight: bold;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -167,16 +176,6 @@
         @keyframes slideIn {
             from { transform: translateY(50px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
-        }
-
-        .highlight-black-box {
-            background-color: black;
-            color: #ff69b4;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 2rem 0;
-            font-weight: bold;
         }
     </style>
 </head>
@@ -222,20 +221,55 @@
             <div class="flourish-embed flourish-chart" data-src="visualisation/18709296"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
         </div>
 
-        <div class="grafico-container">
-            <h2>Evolución de las categorías a través de los años</h2>
-            <div class="flourish-embed flourish-chart" data-src="visualisation/18709297"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-        </div>
-
-        <div class="highlight-black-box">
-            <p>Antes de la pandemia, el 70% de las compras de las mujeres estaban destinadas al hogar, invirtiendo mucho menos en compras personales que en artículos para su familia. Además, el 54% de los consumidores en línea en Chile son mujeres. El comercio electrónico ha brindado un espacio para que las mujeres adquieran productos para sí mismas, permitiéndoles explorar y satisfacer sus propias necesidades y gustos.</p>
-        </div>
-
         <h3 style="text-align: center;">A pesar de ser el producto más popular en la web, el crecimiento exponencial en este segmento no se mantiene.</h3>
+
+        <h2 style="margin-top: 4rem;">Evolución de las categorías a través de los años</h2>
+        <div class="grafico-info-container">
+            <div class="grafico-container">
+                <canvas id="miGraficoBarras"></canvas>
+            </div>
+            <div class="highlight-box">
+                <p>Antes de la pandemia, el ecommerce ya mostraba un crecimiento constante. Sin embargo, la pandemia aceleró significativamente la adopción de compras en línea, haciendo que categorías como 'Vestuario', 'Calzado', 'Alimentación', 'Tecnología' y 'Belleza' vean un aumento exponencial en las ventas.</p>
+            </div>
+        </div>
+
+        <h2 style="text-align: center; color: #ff69b4; font-size: 1.75rem; font-weight: bold; margin-bottom: 2rem;">El ecommerce ha dado un espacio para que las mujeres compren cosas para ellas</h2>
     </section>
 
-    <footer>
-        <p>Este es un proyecto sobre el ecommerce en Chile.</p>
-    </footer>
+    <script>
+        const ctx = document.getElementById('miGraficoBarras').getContext('2d');
+        const miGraficoBarras = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Vestuario', 'Calzado', 'Alimentación', 'Tecnología', 'Belleza'],
+                datasets: [{
+                    label: 'Ventas',
+                    data: [20, 15, 10, 25, 30],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
