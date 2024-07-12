@@ -1,0 +1,46 @@
+Durante el desarrollo de la pandemia del COVID-19, no era posible comprar presencialmente. 
+Por tanto, las mujeres que compraron en ese periodo no pudieron probarse las prendas para 
+corroborar que les quedara bien. Esto reveló como nunca un conflicto que afecta tanto a las mujeres, como al rubro de vestuario femenino. 
+Y es que la mayor cantidad de reclamos que se dio durante ese tiempo fue con respecto al tallaje de las prendas femeninas y problemas relacionados, siendo estos la negación de la devolución de productos por no quedarle bien al cliente. 
+
+Gráfico tipos de reclamos: https://codepen.io/augustasomarriva/pen/wvLaKwe 
+
+Texto: De esta manera, EL 51% DE LAS PRENDAS DE MUJER QUE SE COMPRARON ONLINE EN PANDEMIA FUERON DEVUELTAS.  
+
+Texto: La disparidad de tallaje en prendas femeninas ha causado tanto descontento al punto que afectó al crecimiento de todo el Ecommerce en Chile. 
+
+
+
+
+                // Gráfico de pie
+                google.charts.load('current', {'packages':['corechart']});
+                google.charts.setOnLoadCallback(drawChart);
+    
+                function drawChart() {
+                    var data = google.visualization.arrayToDataTable([
+                        ['Tipo de reclamo', 'Porcentaje'],
+                        ['Tallaje y problemas relacionados', 7.5],
+                        ['Problemas durante Cambio/Devolución', 92.5]
+                    ]);
+    
+                    var options = {
+                        title: 'Tipos de reclamos a tiendas con respecto al vestuario femenino (junio 2019 - junio 2021)',
+                        colors: ['rgb(243, 58, 106)', 'rgb(248, 200, 220)'],
+                        titleTextStyle: {
+                            fontName: 'BodonI Moda SC',
+                            alignment: 'center',
+                            color: 'Matte Black'
+                        },
+                        legend: {
+                            textStyle: {
+                                fontName: 'Cormorant Garamond',
+                                color: 'Matte Black'
+                            }
+                        }
+                    };
+    
+                    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                    chart.draw(data, options);
+                }
+    
+               
