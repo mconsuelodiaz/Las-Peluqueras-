@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Des-talladas en el E-commerce!</title>
+    <title>Estamos DES-TALLADAS en el Ecommerce</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=North+Plains&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
     <style>
         body {
             font-family: 'North Plains', sans-serif;
@@ -18,50 +21,94 @@
             color: #FFFFFF;
             font-size: 18px;
         }
+
         .cover {
-            height: 100vh;
-            background: url('docs/logon.png') no-repeat center center;
-            background-size: 98%;
             display: flex;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            color: #FFFFFF;
+            height: 100vh;
+            background-color: #111111;
         }
+
+        .cover img {
+            width: 50%;
+            height: auto;
+            max-width: 400px;
+        }
+
         header {
-            background: #ff69b4;
-            color: #FFFFFF;
-            padding: 2rem 0;
             text-align: center;
+            padding: 2rem 0;
             animation: fadeIn 2s;
         }
+
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 4rem;
             margin-bottom: 1rem;
+            color: #ff69b4;
+            font-family: 'Roboto', sans-serif;
         }
-        section {
+
+        .subtitle {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: normal;
+            color: #ff69b4;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .hook-section {
+            text-align: center;
+            padding: 3rem 2rem;
+            margin: 2rem 2rem 6rem;
+            animation: fadeIn 1.5s;
+            background: transparent;
+        }
+
+        .hook-section h2 {
+            margin: 0;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #FFFFFF;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .hook-section p {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #FFFFFF;
+        }
+
+        .flourish-text-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
             padding: 3rem 2rem;
             background: #FFFFFF;
             color: #111111;
-            margin: 2rem 2rem;
+            margin: 2rem;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            animation: zoomIn 1.5s;
+            animation: slideIn 1.5s;
         }
-        footer {
-            background: #ff69b4;
-            color: #FFFFFF;
-            text-align: center;
-            padding: 2rem 0;
-            animation: fadeIn 2s;
-            margin-top: 2rem;
+
+        .flourish-text-section .flourish-embed {
+            flex: 1;
         }
-        h2 {
+
+        .info-cuadro {
+            flex: 1;
+            background: transparent;
             color: #111111;
-            margin-top: 0;
-            margin-bottom: 2rem;
+            padding: 1rem;
+            border-radius: 8px;
+            max-width: 400px;
+            text-align: left;
         }
+
         .grafico-info-container {
             display: flex;
             flex-direction: column;
@@ -72,256 +119,443 @@
             margin: 0 auto;
             text-align: center;
             margin-bottom: 2rem;
+            animation: slideIn 1.5s;
         }
-        .grafico-container, .flourish-embed {
+
+        .grafico-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
             width: 100%;
-            max-width: 800px;
-            height: 400px;
+            margin-bottom: 2rem;
         }
-        .info-cuadro {
-            background: #f8f9fa;
+
+        .grafico-container .flourish-embed {
+            flex: 1;
+            background: black;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .grafico-container h2 {
+            color: #FFFFFF;
+            font-weight: bold;
+            margin: 0 0 1rem;
+        }
+
+        .pink-box {
+            background-color: #ff69b4;
             color: #111111;
             padding: 1rem;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             max-width: 400px;
             text-align: left;
+            margin-bottom: 2rem;
+            align-self: flex-start;
         }
-        .parrafo-destacado {
-            background: black;
-            color: hotpink;
+
+        .highlight-box {
+            background-color: black;
+            color: #ff69b4;
             padding: 1rem;
             border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin: 2rem 0;
         }
-        .subtitulo {
-            color: hotpink;
-            font-size: 1.5rem;
-            margin: 1rem 0;
-            text-align: center;
-        }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        @keyframes zoomIn {
-            from { transform: scale(0.5); }
-            to { transform: scale(1); }
+
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
-        .footer-small {
-            font-size: 0.8rem;
-            color: white;
-            margin-top: 2rem;
+
+        .highlight-black-box {
+            background-color: black;
+            color: #ff69b4;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 2rem 0;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <div class="cover"></div>
-    
-    <header>
-        <h1>¡Des-talladas en el E-commerce!: ¿Por qué no vemos un auge exponencial de las compras web en la era digital?</h1>
-    </header>
+    <div class="cover">
+        <img src="finalogo.png" alt="Logo">
+    </div>
 
-    <section id="Desafios">
-        <h2>Principales categorías de compra online a través de los años</h2>
-        <div class="grafico-info-container">
-            <div class="grafico-container">
-                <canvas id="miGraficoBarras"></canvas>
-            </div>
-            <div class="info-cuadro">
-                <p>Aunque el e-commerce en Chile ha experimentado un crecimiento notable con una mayor participación de las mujeres, la cuestión de las tallas de ropa sigue siendo un desafío que puede afectar la experiencia de compra en línea de las mujeres en el país.</p>
-            </div>
-        </div>
+    <section class="hook-section">
+        <h2>¿Te pasa que te compras ropa de tu talla, pero al probarla no te queda bien?</h2>
+        <p>No es tu culpa...</p>
     </section>
 
-    <section>
-        <div class="parrafo-destacado">
+    <header>
+        <h1>Estamos DES-TALLADAS en el Ecommerce</h1>
+        <p class="subtitle">La incomodidad que genera la disparidad del tallaje tiene más peso que los beneficios que trae el Ecommerce al momento de comprar.</p>
+    </header>
+    
+    <div class="flourish-text-section">
+        <div class="flourish-embed flourish-chart" data-src="visualisation/18709061"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+        <div class="info-cuadro">
+            <p>Durante la pandemia los chilenos se vieron obligados a permanecer encerrados en sus hogares por la emergencia sanitaria. Debido a este confinamiento se aceleró la adopción de nuevos comportamientos en la sociedad, como las compras en línea. En ese período de tiempo hubo un alza en el ecommerce y los chilenos descubrieron los beneficios que este brinda. Sin embargo, esta alza no se mantuvo a pesar de su tendencia creciente siendo los centros comerciales físicos la opción preferida para comprar.</p>
+        </div>
+    </div>
+
+    <section id="Desafios">
+        <h2>Razones que tienen las personas tanto para ir como no a una tienda</h2>
+        <div class="grafico-container">
+            <div class="flourish-embed flourish-chart" data-src="visualisation/18710584"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+            <div class="flourish-embed flourish-chart" data-src="visualisation/18710584"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+        </div>
+        <div class="pink-box">
+            <p>En estos gráficos se puede visualizar la comparativa de las razones que tienen las personas tanto para ir como no a una tienda física o centros comerciales a comprar.</p>
+        </div>
+        <h3 style="text-align: center;">¿Se podría decir que el preferir probar los productos es un obstáculo para el crecimiento exponencial del ecommerce en Chile?</h3>
+        
+        <div class="highlight-box">
+            <p>En la web, la ropa es el producto más popular. Con solo unos clics, puedes encontrar una amplia variedad de estilos y tendencias sin salir de casa. La comodidad y la diversidad hacen que la compra de ropa en línea sea la preferida por muchos.</p>
+        </div>
+
+        <div class="grafico-container">
+            <h2>Principales categorías de la compra online</h2>
+            <div class="flourish-embed flourish-chart" data-src="visualisation/18709296"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+        </div>
+
+        <div class="grafico-container">
+            <h2>Evolución de las categorías a través de los años</h2>
+            <div class="flourish-embed flourish-chart" data-src="visualisation/18709297"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+        </div>
+
+        <div class="highlight-black-box">
             <p>Antes de la pandemia, el 70% de las compras de las mujeres estaban destinadas al hogar, invirtiendo mucho menos en compras personales que en artículos para su familia. Además, el 54% de los consumidores en línea en Chile son mujeres. El comercio electrónico ha brindado un espacio para que las mujeres adquieran productos para sí mismas, permitiéndoles explorar y satisfacer sus propias necesidades y gustos.</p>
         </div>
 
-        <h3 class="subtitulo">El ecommerce ha dado un espacio para que las mujeres compren cosas para ellas.</h3>
+        <h3 style="text-align: center;">A pesar de ser el producto más popular en la web, el crecimiento exponencial en este segmento no se mantiene.</h3>
+    </section>
+
+
+            body {
+                font-family: 'North Plains', sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                background-color: #111111;
+                color: #FFFFFF;
+                font-size: 18px;
+            }
+            .cover {
+                height: 100vh;
+                background: url('docs/logon.png') no-repeat center center;
+                background-size: 98%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: #FFFFFF;
+            }
+            header {
+                background: #ff69b4;
+                color: #FFFFFF;
+                padding: 2rem 0;
+                text-align: center;
+                animation: fadeIn 2s;
+            }
+            header h1 {
+                margin: 0;
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+            section {
+                padding: 3rem 2rem;
+                background: #FFFFFF;
+                color: #111111;
+                margin: 2rem 2rem;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                animation: zoomIn 1.5s;
+            }
+            footer {
+                background: #ff69b4;
+                color: #FFFFFF;
+                text-align: center;
+                padding: 2rem 0;
+                animation: fadeIn 2s;
+                margin-top: 2rem;
+            }
+            h2 {
+                color: #111111;
+                margin-top: 0;
+                margin-bottom: 2rem;
+            }
+            .grafico-info-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                width: 90%;
+                margin: 0 auto;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            .grafico-container, .flourish-embed {
+                width: 100%;
+                max-width: 800px;
+                height: 400px;
+            }
+            .info-cuadro {
+                background: #f8f9fa;
+                color: #111111;
+                padding: 1rem;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                max-width: 400px;
+                text-align: left;
+            }
+            .parrafo-destacado {
+                background: black;
+                color: hotpink;
+                padding: 1rem;
+                border-radius: 8px;
+                margin: 2rem 0;
+            }
+            .subtitulo {
+                color: hotpink;
+                font-size: 1.5rem;
+                margin: 1rem 0;
+                text-align: center;
+            }
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+            @keyframes zoomIn {
+                from { transform: scale(0.5); }
+                to { transform: scale(1); }
+            }
+            .footer-small {
+                font-size: 0.8rem;
+                color: white;
+                margin-top: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cover"></div>
         
-        <div class="parrafo-destacado">
-            <p>Respondiendo la pregunta planteada anteriormente: ¡SÍ, SI HAY UNA RELACIÓN ENTRE EL MOTIVO DE COMPRAR EN UN MALL PARA PROBARSE LAS COSAS CON LA OBSTACULIZACION DEL CRECIMIENTO EXPONENCIAL DEL ECOMMERCE EN CHILE!</p>
-        </div>
-    </section>
-
-    <section>
-        <div id="piechart" style="width: 100%; height: 500px;"></div>
-        <p style="color: white; text-align: center;">Durante el desarrollo de la pandemia del COVID-19, no era posible comprar presencialmente. Por tanto, las mujeres que compraron en ese periodo no pudieron probarse las prendas. Esto reveló como nunca, un conflicto que afecta tanto a las mujeres, como al rubro de vestuario femenino.</p>
-        <h3 class="subtitulo">EL 51% DE LAS PRENDAS DE MUJER QUE SE COMPRARON ONLINE EN PANDEMIA FUERON DEVUELTAS.</h3>
-    </section>
-
-    <section>
-        <div class="parrafo-destacado">
-            <p>Muchas mujeres chilenas han sido víctimas de la gran disparidad del tallaje de la ropa que se les vende. ¿Cuántas veces una se ha sentido insegura por probarse una prenda de su talla y que no le cabe? Y es que este conflicto es bastante común.</p>
-        </div>
-
-        <div class="parrafo-destacado">
-            <p>Esta disparidad es un gran obstáculo para el crecimiento exponencial de la herramienta que además de beneficiar a los chilenos de distintas maneras, ha permitido que la mujer chilena aumente sus compras en cosas para su goce personal, es decir, el Ecommerce.</p>
-        </div>
-
-        <div id="chart_div" style="width: 100%; height: 500px;"></div>
-    </section>
-
-    <section>
-        <div class="parrafo-destacado">
-            <p>A pesar de ser un conflicto que perjudica a tanta gente, este pudo haber sido evitado desde un principio. Sin embargo, quienes se deberían haber encargado de realizarlo, nunca lo hicieron.</p>
-        </div>
-
-        <div class="parrafo-destacado">
-            <p>En general, las grandes tiendas de retail de Chile han decidido no tomar las medidas necesarias para enfrentar a esta disparidad.</p>
-        </div>
-    </section>
-
-    <footer>
-        <p class="footer-small">Trabajo de By. Valentina Muñoz, Augusta Somarriva, Consuelo Díaz</p>
-        <p>&copy; 2024 E-commerce en Chile</p>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Gráfico de barras
-            var ctx = document.getElementById('miGraficoBarras').getContext('2d');
-            var miGraficoBarras = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['2020', '2021', '2022', '2023'],
-                    datasets: [
-                        {
-                            label: 'Vestuario',
-                            data: [46, 47, 43, 45],
-                            backgroundColor: 'rgba(255, 105, 180, 0.8)',
-                        },
-                        {
-                            label: 'Calzado',
-                            data: [32, 28, 27, 31],
-                            backgroundColor: 'rgba(255, 182, 193, 0.8)',
-                        },
-                        {
-                            label: 'Alimentación',
-                            data: [34, 32, 25, 23],
-                            backgroundColor: 'rgba(255, 20, 147, 0.8)',
-                        },
-                        {
-                            label: 'Tecnología',
-                            data: [44, 36, 27, 22],
-                            backgroundColor: 'rgba(255, 105, 180, 0.8)',
-                        },
-                        {
-                            label: 'Belleza y cuidado personal',
-                            data: [24, 24, 19, 19],
-                            backgroundColor: 'rgba(255, 182, 193, 0.8)',
-                        },
-                        {
-                            label: 'Accesorios',
-                            data: [21, 22, 17, 14],
-                            backgroundColor: 'rgba(255, 20, 147, 0.8)',
-                        },
-                        {
-                            label: 'Salud',
-                            data: [21, 20, 15, 14],
-                            backgroundColor: 'rgba(255, 105, 180, 0.8)',
-                        },
-                        {
-                            label: 'Mascotas',
-                            data: [13, 13, 13, 13],
-                            backgroundColor: 'rgba(255, 182, 193, 0.8)',
-                        },
-                        {
-                            label: 'Deportes',
-                            data: [16, 14, 13, 13],
-                            backgroundColor: 'rgba(255, 20, 147, 0.8)',
-                        }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    scales: {
-                        y: {
-                            beginAtZero: true
+        <header>
+            <h1>¡Des-talladas en el E-commerce!: ¿Por qué no vemos un auge exponencial de las compras web en la era digital?</h1>
+        </header>
+    
+        <section id="Desafios">
+            <h2>Principales categorías de compra online a través de los años</h2>
+            <div class="grafico-info-container">
+                <div class="grafico-container">
+                    <canvas id="miGraficoBarras"></canvas>
+                </div>
+                <div class="info-cuadro">
+                    <p>Aunque el e-commerce en Chile ha experimentado un crecimiento notable con una mayor participación de las mujeres, la cuestión de las tallas de ropa sigue siendo un desafío que puede afectar la experiencia de compra en línea de las mujeres en el país.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section>
+            <div class="parrafo-destacado">
+                <p>Antes de la pandemia, el 70% de las compras de las mujeres estaban destinadas al hogar, invirtiendo mucho menos en compras personales que en artículos para su familia. Además, el 54% de los consumidores en línea en Chile son mujeres. El comercio electrónico ha brindado un espacio para que las mujeres adquieran productos para sí mismas, permitiéndoles explorar y satisfacer sus propias necesidades y gustos.</p>
+            </div>
+    
+            <h3 class="subtitulo">El ecommerce ha dado un espacio para que las mujeres compren cosas para ellas.</h3>
+            
+            <div class="parrafo-destacado">
+                <p>Respondiendo la pregunta planteada anteriormente: ¡SÍ, SI HAY UNA RELACIÓN ENTRE EL MOTIVO DE COMPRAR EN UN MALL PARA PROBARSE LAS COSAS CON LA OBSTACULIZACION DEL CRECIMIENTO EXPONENCIAL DEL ECOMMERCE EN CHILE!</p>
+            </div>
+        </section>
+    
+        <section>
+            <div id="piechart" style="width: 100%; height: 500px;"></div>
+            <p style="color: white; text-align: center;">Durante el desarrollo de la pandemia del COVID-19, no era posible comprar presencialmente. Por tanto, las mujeres que compraron en ese periodo no pudieron probarse las prendas. Esto reveló como nunca, un conflicto que afecta tanto a las mujeres, como al rubro de vestuario femenino.</p>
+            <h3 class="subtitulo">EL 51% DE LAS PRENDAS DE MUJER QUE SE COMPRARON ONLINE EN PANDEMIA FUERON DEVUELTAS.</h3>
+        </section>
+    
+        <section>
+            <div class="parrafo-destacado">
+                <p>Muchas mujeres chilenas han sido víctimas de la gran disparidad del tallaje de la ropa que se les vende. ¿Cuántas veces una se ha sentido insegura por probarse una prenda de su talla y que no le cabe? Y es que este conflicto es bastante común.</p>
+            </div>
+    
+            <div class="parrafo-destacado">
+                <p>Esta disparidad es un gran obstáculo para el crecimiento exponencial de la herramienta que además de beneficiar a los chilenos de distintas maneras, ha permitido que la mujer chilena aumente sus compras en cosas para su goce personal, es decir, el Ecommerce.</p>
+            </div>
+    
+            <div id="chart_div" style="width: 100%; height: 500px;"></div>
+        </section>
+    
+        <section>
+            <div class="parrafo-destacado">
+                <p>A pesar de ser un conflicto que perjudica a tanta gente, este pudo haber sido evitado desde un principio. Sin embargo, quienes se deberían haber encargado de realizarlo, nunca lo hicieron.</p>
+            </div>
+    
+            <div class="parrafo-destacado">
+                <p>En general, las grandes tiendas de retail de Chile han decidido no tomar las medidas necesarias para enfrentar a esta disparidad.</p>
+            </div>
+        </section>
+    
+        <footer>
+            <p class="footer-small">Trabajo de By. Valentina Muñoz, Augusta Somarriva, Consuelo Díaz</p>
+            <p>&copy; 2024 E-commerce en Chile</p>
+        </footer>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Gráfico de barras
+                var ctx = document.getElementById('miGraficoBarras').getContext('2d');
+                var miGraficoBarras = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['2020', '2021', '2022', '2023'],
+                        datasets: [
+                            {
+                                label: 'Vestuario',
+                                data: [46, 47, 43, 45],
+                                backgroundColor: 'rgba(255, 105, 180, 0.8)',
+                            },
+                            {
+                                label: 'Calzado',
+                                data: [32, 28, 27, 31],
+                                backgroundColor: 'rgba(255, 182, 193, 0.8)',
+                            },
+                            {
+                                label: 'Alimentación',
+                                data: [34, 32, 25, 23],
+                                backgroundColor: 'rgba(255, 20, 147, 0.8)',
+                            },
+                            {
+                                label: 'Tecnología',
+                                data: [44, 36, 27, 22],
+                                backgroundColor: 'rgba(255, 105, 180, 0.8)',
+                            },
+                            {
+                                label: 'Belleza y cuidado personal',
+                                data: [24, 24, 19, 19],
+                                backgroundColor: 'rgba(255, 182, 193, 0.8)',
+                            },
+                            {
+                                label: 'Accesorios',
+                                data: [21, 22, 17, 14],
+                                backgroundColor: 'rgba(255, 20, 147, 0.8)',
+                            },
+                            {
+                                label: 'Salud',
+                                data: [21, 20, 15, 14],
+                                backgroundColor: 'rgba(255, 105, 180, 0.8)',
+                            },
+                            {
+                                label: 'Mascotas',
+                                data: [13, 13, 13, 13],
+                                backgroundColor: 'rgba(255, 182, 193, 0.8)',
+                            },
+                            {
+                                label: 'Deportes',
+                                data: [16, 14, 13, 13],
+                                backgroundColor: 'rgba(255, 20, 147, 0.8)',
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
                         }
                     }
+                });
+    
+                // Gráfico de pie
+                google.charts.load('current', {'packages':['corechart']});
+                google.charts.setOnLoadCallback(drawChart);
+    
+                function drawChart() {
+                    var data = google.visualization.arrayToDataTable([
+                        ['Tipo de reclamo', 'Porcentaje'],
+                        ['Tallaje y problemas relacionados', 7.5],
+                        ['Problemas durante Cambio/Devolución', 92.5]
+                    ]);
+    
+                    var options = {
+                        title: 'Tipos de reclamos a tiendas con respecto al vestuario femenino (junio 2019 - junio 2021)',
+                        colors: ['rgb(243, 58, 106)', 'rgb(248, 200, 220)'],
+                        titleTextStyle: {
+                            fontName: 'BodonI Moda SC',
+                            alignment: 'center',
+                            color: 'Matte Black'
+                        },
+                        legend: {
+                            textStyle: {
+                                fontName: 'Cormorant Garamond',
+                                color: 'Matte Black'
+                            }
+                        }
+                    };
+    
+                    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                    chart.draw(data, options);
+                }
+    
+                // Gráfico de disparidad de tallas
+                google.charts.load('current', {'packages':['corechart']});
+                google.charts.setOnLoadCallback(drawDisparidadChart);
+    
+                function drawDisparidadChart() {
+                    var data = google.visualization.arrayToDataTable([
+                        ['Tipo de Prenda', 'S Mínimo', 'S Máximo', 'M Mínimo', 'M Máximo', 'L Mínimo', 'L Máximo', 'XL Mínimo', 'XL Máximo'],
+                        ['Jeans', 10, 12, 20, 22, 15, 17, 5, 7],
+                        ['Vestido', 15, 18, 10, 13, 25, 28, 10, 12],
+                        ['Polera', 20, 23, 15, 18, 10, 12, 5, 7]
+                    ]);
+    
+                    var options = {
+                        title: 'DISPARIDAD DEL LARGO DE LAS TALLAS DE CADA PRENDA',
+                        chartArea: {width: '50%'},
+                        isStacked: false,
+                        hAxis: {
+                            title: 'Tipo de Prenda',
+                            titleTextStyle: {
+                                fontName: 'Cormorant Garamond'
+                            },
+                            textStyle: {
+                                fontName: 'Cormorant Garamond'
+                            }
+                        },
+                        vAxis: {
+                            title: 'Medidas en cm',
+                            titleTextStyle: {
+                                fontName: 'Cormorant Garamond'
+                            },
+                            textStyle: {
+                                fontName: 'Cormorant Garamond'
+                            }
+                        },
+                        colors: ['rgb(255, 105, 180)', 'rgb(248, 200, 220)', 'rgb(255, 105, 180)', 'rgb(248, 200, 220)', 'rgb(255, 105, 180)', 'rgb(248, 200, 220)', 'rgb(255, 105, 180)', 'rgb(248, 200, 220)'],
+                        titleTextStyle: {
+                            color: 'Matte Black',
+                            fontName: 'BodonI Moda SC'
+                        }
+                    };
+    
+                    var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+                    chart.draw(data, options);
                 }
             });
-
-            // Gráfico de pie
-            google.charts.load('current', {'packages':['corechart']});
-            google.charts.setOnLoadCallback(drawChart);
-
-            function drawChart() {
-                var data = google.visualization.arrayToDataTable([
-                    ['Tipo de reclamo', 'Porcentaje'],
-                    ['Tallaje y problemas relacionados', 7.5],
-                    ['Problemas durante Cambio/Devolución', 92.5]
-                ]);
-
-                var options = {
-                    title: 'Tipos de reclamos a tiendas con respecto al vestuario femenino (junio 2019 - junio 2021)',
-                    colors: ['rgb(243, 58, 106)', 'rgb(248, 200, 220)'],
-                    titleTextStyle: {
-                        fontName: 'BodonI Moda SC',
-                        alignment: 'center',
-                        color: 'Matte Black'
-                    },
-                    legend: {
-                        textStyle: {
-                            fontName: 'Cormorant Garamond',
-                            color: 'Matte Black'
-                        }
-                    }
-                };
-
-                var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-                chart.draw(data, options);
-            }
-
-            // Gráfico de disparidad de tallas
-            google.charts.load('current', {'packages':['corechart']});
-            google.charts.setOnLoadCallback(drawDisparidadChart);
-
-            function drawDisparidadChart() {
-                var data = google.visualization.arrayToDataTable([
-                    ['Tipo de Prenda', 'S Mínimo', 'S Máximo', 'M Mínimo', 'M Máximo', 'L Mínimo', 'L Máximo', 'XL Mínimo', 'XL Máximo'],
-                    ['Jeans', 10, 12, 20, 22, 15, 17, 5, 7],
-                    ['Vestido', 15, 18, 10, 13, 25, 28, 10, 12],
-                    ['Polera', 20, 23, 15, 18, 10, 12, 5, 7]
-                ]);
-
-                var options = {
-                    title: 'DISPARIDAD DEL LARGO DE LAS TALLAS DE CADA PRENDA',
-                    chartArea: {width: '50%'},
-                    isStacked: false,
-                    hAxis: {
-                        title: 'Tipo de Prenda',
-                        titleTextStyle: {
-                            fontName: 'Cormorant Garamond'
-                        },
-                        textStyle: {
-                            fontName: 'Cormorant Garamond'
-                        }
-                    },
-                    vAxis: {
-                        title: 'Medidas en cm',
-                        titleTextStyle: {
-                            fontName: 'Cormorant Garamond'
-                        },
-                        textStyle: {
-                            fontName: 'Cormorant Garamond'
-                        }
-                    },
-                    colors: ['rgb(255, 105, 180)', 'rgb(248, 200, 220)', 'rgb(255, 105, 180)', 'rgb(248, 200, 220)', 'rgb(255, 105, 180)', 'rgb(248, 200, 220)', 'rgb(255, 105, 180)', 'rgb(248, 200, 220)'],
-                    titleTextStyle: {
-                        color: 'Matte Black',
-                        fontName: 'BodonI Moda SC'
-                    }
-                };
-
-                var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-                chart.draw(data, options);
-            }
-        });
-    </script>
+        </script>
+  
+ <footer>
+        <p>Este es un proyecto sobre el ecommerce en Chile.</p>
+    </footer>
 </body>
 </html>
-
