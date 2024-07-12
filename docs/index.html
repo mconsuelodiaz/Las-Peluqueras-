@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estamos DES-TALLADAS en el Ecommerce</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>¡Des-talladas en el E-commerce!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=North+Plains&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
@@ -19,121 +18,74 @@
         }
 
         .cover {
+            height: 100vh;
+            background: url('finalogo.png') no-repeat center center;
+            background-size: contain;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: #111111;
-        }
-
-        .cover img {
-            width: 50%;
-            height: auto;
-            max-width: 400px;
+            text-align: center;
         }
 
         header {
-            text-align: center;
+            background: #ff69b4;
+            color: #FFFFFF;
             padding: 2rem 0;
+            text-align: center;
             animation: fadeIn 2s;
         }
 
         header h1 {
             margin: 0;
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            color: #ff69b4;
-            font-family: 'Roboto', sans-serif;
+            font-size: 3rem; /* Cambiado para mayor tamaño */
+            margin-bottom: 1.5rem;
+            font-family: 'Cormorant Garamond', serif; /* Estilo de Vogue */
         }
 
-        .subtitle {
-            margin: 0;
-            font-size: 1.5rem;
-            font-weight: normal;
-            color: #ff69b4;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .hook-section {
+        .enganche {
             text-align: center;
-            padding: 3rem 2rem;
-            margin: 2rem 2rem 6rem;
-            animation: zoomIn 1.5s;
-            background: transparent;
+            color: #FFFFFF;
+            font-size: 24px;
+            margin: 4rem 0; /* Más espacio */
+            animation: fadeInUp 1.5s;
         }
 
-        .hook-section h2 {
+        .enganche h2 {
+            color: #ff69b4;
+            font-size: 2.5rem;
             margin: 0;
-            font-size: 2rem;
             margin-bottom: 1rem;
-            color: #FFFFFF;
-            font-family: 'Cormorant Garamond', serif;
         }
 
-        .hook-section p {
-            margin: 0;
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: #FFFFFF;
-        }
-
-        .flourish-text-section {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
+        .section {
             padding: 3rem 2rem;
             background: #FFFFFF;
             color: #111111;
             margin: 2rem;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            animation: slideIn 1.5s;
-        }
-
-        .flourish-text-section .flourish-embed {
-            flex: 1;
-        }
-
-        .flourish-text-section .info-cuadro {
-            flex: 1;
-            background: transparent;
-            color: #111111;
-            padding: 1rem;
-            border-radius: 8px;
-            max-width: 400px;
-            text-align: left;
-        }
-
-        .grafico-info-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            width: 90%;
-            margin: 0 auto;
-            text-align: center;
-            margin-bottom: 2rem;
-            animation: slideIn 1.5s;
+            animation: zoomIn 1.5s;
         }
 
         .grafico-container {
-            background: black;
-            padding: 20px;
-            border-radius: 8px;
             width: 100%;
             max-width: 800px;
+            height: 400px;
+            margin: 0 auto;
+            background: #111111;
+            padding: 1rem;
+            border-radius: 8px;
         }
 
-        .grafico-container canvas {
-            width: 100%;
-            height: 100%;
-        }
-
-        .grafico-container h2 {
-            color: #FFFFFF;
-            font-weight: bold;
-            margin: 0 0 1rem;
+        .info-cuadro {
+            background: #f8f9fa;
+            color: #111111;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            text-align: left;
+            margin: 2rem auto; /* Margen automático */
         }
 
         footer {
@@ -145,79 +97,50 @@
             margin-top: 2rem;
         }
 
-        h2 {
-            color: #111111;
-            margin-top: 0;
-            margin-bottom: 2rem;
-        }
-
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes zoomIn {
             from { transform: scale(0.5); }
             to { transform: scale(1); }
         }
-
-        @keyframes slideIn {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        .info-cuadro {
-            background: #f8f9fa;
-            color: #111111;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            text-align: left;
-        }
     </style>
 </head>
 <body>
-    <div class="cover">
-        <img src="finalogo.png" alt="Logo">
-    </div>
-
-    <section class="hook-section">
-        <h2>¿Te pasa que te compras ropa de tu talla, pero al probarla no te queda bien?</h2>
-        <p>No es tu culpa...</p>
-    </section>
-
+    <div class="cover"></div>
+    
     <header>
         <h1>Estamos DES-TALLADAS en el Ecommerce</h1>
-        <p class="subtitle">La incomodidad que genera la disparidad del tallaje tiene más peso que los beneficios que trae el Ecommerce al momento de comprar.</p>
     </header>
     
-    <div class="flourish-text-section">
-        <div class="flourish-embed flourish-chart" data-src="visualisation/18709061"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-        <div class="info-cuadro">
-            <p>Durante la pandemia los chilenos se vieron obligados a permanecer encerrados en sus hogares por la emergencia sanitaria. Debido a este confinamiento se aceleró la adopción de nuevos comportamientos en la sociedad, como las compras en línea. En ese período de tiempo hubo un alza en el ecommerce y los chilenos descubrieron los beneficios que este brinda. Sin embargo, esta alza no se mantuvo a pesar de su tendencia creciente siendo los centros comerciales físicos la opción preferida para comprar.</p>
-        </div>
+    <div class="enganche">
+        <h2>¿Te pasa que te compras ropa de tu talla, pero al probarla no te queda bien? No es tu culpa...</h2>
     </div>
 
-    <section id="Desafios">
+    <section class="section" id="Desafios">
         <h2>Principales categorías de compra online a través de los años</h2>
-        <div class="grafico-info-container">
-            <div class="grafico-container">
-                <canvas id="miGraficoBarras"></canvas>
-            </div>
-            <div class="info-cuadro">
-                <p>Aunque el e-commerce en Chile ha experimentado un crecimiento notable con una mayor participación de las mujeres, la cuestión de las tallas de ropa sigue siendo un desafío que puede afectar la experiencia de compra en línea de las mujeres en el país.</p>
-            </div>
-        </div>
-    </section>
-
-    <div class="grafico-info-container" id="Grafico">
         <div class="grafico-container">
-            <h2>Rango de anchura de cintura de los jeans que venden las tiendas de retail en Chile</h2>
-            <canvas id="miGraficoBarras2"></canvas>
+            <canvas id="miGraficoBarras"></canvas>
         </div>
         <div class="info-cuadro">
             <p>Aunque el e-commerce en Chile ha experimentado un crecimiento notable con una mayor participación de las mujeres, la cuestión de las tallas de ropa sigue siendo un desafío que puede afectar la experiencia de compra en línea de las mujeres en el país.</p>
+        </div>
+    </section>
+
+    <div class="grafico-info-container">
+        <h2>Rango de anchura de cintura de los jeans que venden las tiendas de retail en Chile</h2>
+        <div class="grafico-container">
+            <canvas id="miGraficoBarras2"></canvas>
+        </div>
+        <div class="info-cuadro">
+            <p>Aunque el e-commerce en Chile ha experimentado un crecimiento notable, la cuestión de las tallas de ropa sigue siendo un desafío.</p>
         </div>
     </div>
 
@@ -226,11 +149,15 @@
         <div class="flourish-embed" data-src="story/2471743"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
     </div>
 
-    <script>
-        // Obtener el contexto del canvas donde se dibujará el gráfico
-        var ctx = document.getElementById('miGraficoBarras').getContext('2d');
+    <div class="flourish-embed flourish-chart" data-src="visualisation/18708768"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
 
-        // Crear el gráfico de barras
+    <footer>
+        <p>&copy; 2024 E-commerce en Chile</p>
+    </footer>
+
+    <script>
+        // Gráfico de barras
+        var ctx = document.getElementById('miGraficoBarras').getContext('2d');
         var miGraficoBarras = new Chart(ctx, {
             type: 'bar',
             data: {
@@ -276,10 +203,7 @@
             }
         });
     </script>
-
-    <footer>
-        <p>&copy; 2024 E-commerce en Chile</p>
-    </footer>
 </body>
 </html>
+
 
