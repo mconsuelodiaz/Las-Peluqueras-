@@ -1,0 +1,54 @@
+Grafico 7
+Muchas mujeres chilenas han sido víctimas de la gran disparidad del tallaje de la ropa que se les vende. ¿Cuántas veces una se ha sentido insegura por probarse una prenda de su talla y que no le cabe? Y es que este conflicto es bastante común. Está presente no solo en todo tipo de prendas y en las medidas de cada zona o característica de estas, sino que también en todas las tiendas de retail del país y en las páginas internacionales a través de las que más compran ropa las chilenas.  
+Un estudio del 2021 hecho por el Sernac demostró a través de la publicación de las medidas, en centímetros, de los largos de los jeans, vestidos y las poleras de las tallas S, M, L y XL de mujer la gran disparidad que existe entre las prendas de las mismas tallas. 
+Gráfico disparidad tallas de largo de jeans, poleras y vestidos. https://codepen.io/augustasomarriva/pen/wvLaKym 
+Texto: Esta disparidad es un gran obstáculo para el crecimiento exponencial de la herramienta que además de beneficiar a los chilenos de distintas maneras, ha permitido que la mujer chilena aumente sus compras en cosas para su goce personal, es decir, el Ecommerce. 
+No es justo que la mujer chilena, cuando por fin consigue un espacio en donde comprar cosas para su goce propio, se enfrente con este problema. 
+
+
+// Gráfico de disparidad de tallas
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawDisparidadChart);
+
+function drawDisparidadChart() {
+    var data = google.visualization.arrayToDataTable([
+        ['Tipo de Prenda', 'S Mínimo', 'S Máximo', 'M Mínimo', 'M Máximo', 'L Mínimo', 'L Máximo', 'XL Mínimo', 'XL Máximo'],
+        ['Jeans', 73, 102.2, 73, 93.5, 74, 106.8, 74, 107.2],
+        ['Vestido', 83.7, 124, 83, 125, 79, 127, 83.7, 124],
+        ['Polera', 55.3, 97, 50, 103, 0, 0, 59.4, 115]
+    ]);
+
+    var options = {
+        title: 'DISPARIDAD DEL LARGO DE LAS TALLAS DE CADA PRENDA',
+        chartArea: {width: '50%'},
+        isStacked: false,
+        hAxis: {
+            title: 'Tipo de Prenda',
+            titleTextStyle: {
+                fontName: 'Cormorant Garamond'
+            },
+            textStyle: {
+                fontName: 'Cormorant Garamond'
+            }
+        },
+        vAxis: {
+            title: 'Medidas en cm',
+            titleTextStyle: {
+                fontName: 'Cormorant Garamond'
+            },
+            textStyle: {
+                fontName: 'Cormorant Garamond'
+            }
+        },
+        colors: ['rgb(255, 105, 180)', 'rgb(248, 200, 220)', 'rgb(255, 105, 180)', 'rgb(248, 200, 220)', 'rgb(255, 105, 180)', 'rgb(248, 200, 220)', 'rgb(255, 105, 180)', 'rgb(248, 200, 220)'],
+        titleTextStyle: {
+            color: 'Matte Black',
+            fontName: 'BodonI Moda SC'
+        }
+    };
+
+    var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+}
+});
+</script>

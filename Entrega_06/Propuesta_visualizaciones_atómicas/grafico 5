@@ -1,0 +1,74 @@
+Grafico 5
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Gráfico de barras
+        var ctx = document.getElementById('miGraficoBarras').getContext('2d');
+        var miGraficoBarras = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['2020', '2021', '2022', '2023'],
+                datasets: [
+                    {
+                        label: 'Vestuario',
+                        data: [46, 47, 43, 45],
+                        backgroundColor: 'rgba(255, 105, 180, 0.8)',
+                    },
+                    {
+                        label: 'Calzado',
+                        data: [32, 28, 27, 31],
+                        backgroundColor: 'rgba(255, 182, 193, 0.8)',
+                    },
+                    {
+                        label: 'Alimentación',
+                        data: [34, 32, 25, 23],
+                        backgroundColor: 'rgba(255, 20, 147, 0.8)',
+                    },
+                    {
+                        label: 'Tecnología',
+                        data: [44, 36, 27, 22],
+                        backgroundColor: 'rgba(255, 105, 180, 0.8)',
+                    },
+                    {
+                        label: 'Belleza y cuidado personal',
+                        data: [24, 24, 19, 19],
+                        backgroundColor: 'rgba(255, 182, 193, 0.8)',
+                    },
+                    {
+                        label: 'Accesorios',
+                        data: [21, 22, 17, 14],
+                        backgroundColor: 'rgba(255, 20, 147, 0.8)',
+                    },
+                    {
+                        label: 'Salud',
+                        data: [21, 20, 15, 14],
+                        backgroundColor: 'rgba(255, 105, 180, 0.8)',
+                    },
+                    {
+                        label: 'Mascotas',
+                        data: [13, 13, 13, 13],
+                        backgroundColor: 'rgba(255, 182, 193, 0.8)',
+                    },
+                    {
+                        label: 'Deportes',
+                        data: [16, 14, 13, 13],
+                        backgroundColor: 'rgba(255, 20, 147, 0.8)',
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+
+
+En este grafico podemos ver que la ropa es el producto más popular. Con solo unos clics, puedes encontrar una amplia variedad de estilos y tendencias sin salir de casa. La comodidad y la diversidad hacen que la compra de ropa en línea sea la preferida por muchos. 
+A pesar de ser el producto más popular en la web, el crecimiento exponencial en este segmento no se mantiene. 
+
+ 

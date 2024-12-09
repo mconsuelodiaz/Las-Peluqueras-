@@ -1,0 +1,20 @@
+# La disparidad de tallaje de ropa femenina ha entorpecido el desarrollo del Ecommerce en Chile, perjudicando de mayor manera a las mujeres. 
+
+La pandemia del COVID-19 significó un gran auge del Ecommerce en Chile satisfaciendo varias necesidades a la población. Si bien, el crecimiento exponencial de este se creía constante, no ha sido así. Tras el fin de la pandemia, este se ha visto entorpecido.  
+
+Dentro de este contexto, la categoría que más se ha comprado de manera online ha sido por lejos el vestuario. Sin embargo, al igual que con el Ecommerce en Chile en general, las compras por Internet de vestuario también han manifestado una gran desaceleración desde el término del confinamiento. ¿A qué se deberá este fenómeno?  
+
+Un factor importante por mencionar es que las mujeres dominan el Ecommerce en Chile y son quienes más han salido beneficiadas. Esto se debe a que, previo al COVID-19, el 70% de lo que compraban eran cosas para el hogar. En cambio, hoy en día eso ha cambiado radicalmente siendo la mayor dominación en el ocio y la moda. Esto es relevante, ya que la categoría más vendida de manera online, dentro del vestuario, es el de mujer, con un 64%. 
+
+El tema es que la disparidad del tallaje de la ropa femenina es un desafìo primordial que enfrenta el Ecommerce en Chile ya que, en 2021, dentro de un contexto de cuarentena en el que las compras online se dispararon, el 51% de las prendas femeninas que se vendieron a través de la web fueron devueltas y entre junio de 2019 y junio de 2021 el 92,5% de reclamos con respecto a ropa femenina fue debido al tallaje y problemas relacionados. 
+
+La raíz de este problema viene siendo la gran disparidad entre medidas de las tallas de las prendas de mujer que venden las tiendas, en especial, las grandes tiendas de retail. Este problema pudo haber sido evitado por tales marcas mediante la realización de estudios antropométricos del consumidor, para así lograr una estandarización de las tallas. Y si se hubiera evitado, las ventas por Internet no hubieran desacelerado su crecimiento de la manera en la que ocurrió.  
+
+Este es un conflicto que no solo afecta al Ecommerce en Chile en general, sino también a las mujeres chilenas. Por esto, hace poco se presentó un proyecto de ley llamado Talla Para Todes, que busca abordar el problema y crear equidad para las mujeres chilenas en el mundo de la moda y del comercio en línea. Si se logra implantar, significaría una revolución para el Ecommerce chileno y para las compras por parte de mujeres. 
+
+
+## Comentarios finales 
+
+A pesar de ser un camino largo y dificultoso debido a numerosos cambios de enfoque, problemas con los computadores, problemas personales y problemas de grupo, estamos satisfechas con nuestro resultado. Por fin logramos contar una historia novedosa y relevante con la que muchas mujeres se lograrían sentir identificadas con respecto a la experiencia de comprarse alguna prenda de su talla por Internet y que no les que quede bien. Cada una de nosotras ha pasado por eso y nos ha afectado negativamente a nivel psicológico, disminuyendo nuestra autoestima. Así que quedamos contentas con la idea de poder contar una historia en la que le logremos explicar a las mujeres, que no tiene nada que ver con ellas y su cuerpo, que es un problema que va mucho más allá y que debe ser arreglado. Y sinceramente, creemos que lo logramos. Sentimos que nuestras visualizaciones atómicas que incluimos en nuestra storyweb son pertinentes con la historia, que esta se cuenta a través de estas y que son fáciles de entender para la audiencia. 
+
+Aunque al principio del curso, como periodistas, no entendíamos la necesidad de aprender sobre el lenguaje de la programación, ahora sabemos que es una herramienta bastante útil para contar historias. Logramos abrir nuestras mentes. Aprendimos que podemos narrar un suceso de manera dinámica y entretenida a través de visualizaciones y que saber acerca de códigos es clave para lograr transmitir lo que tenemos en mente y cómo lo tenemos en mente. Muchas gracias profesora. 
